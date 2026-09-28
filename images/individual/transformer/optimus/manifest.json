@@ -1,0 +1,473 @@
+{
+  "importedAt": "2026-09-28T12:10:15.719Z",
+  "source": "https://optimus-city.ru",
+  "note": "Authorized reference import for the Prostill public site.",
+  "collections": [
+    {
+      "slug": "rmk-arena",
+      "title": "РМК Арена, Челябинск",
+      "pageUrl": "https://optimus-city.ru/projects/rmk-arena-chelyabinsk/",
+      "type": "project",
+      "images": [
+        {
+          "localPath": "/images/individual/transformer/optimus/rmk-arena/01.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/d5d/wqd3rlrcqgy0hrcoj2dsayjwl3znxx2l/Galereya-1130x730-RMK1.webp",
+          "sourceFilename": "Galereya-1130x730-RMK1.webp",
+          "sha256": "f6125ef24e3b54ddae2324257457971649c30b65a7cbb9e4c69e62e7493d9636"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/rmk-arena/02.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/0ef/p5w9dhkams787cdqit4ey03j98dbewi0/Galereya-1130x730-RMK2.webp",
+          "sourceFilename": "Galereya-1130x730-RMK2.webp",
+          "sha256": "104f8b5633e574be70da70c106a4fc080cbfce808cd99b9c2ec0efc3e5d07c6e"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/rmk-arena/03.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/429/znr9yca08si4cz1bu47nhsyipfwv11tp/Galereya-1130x730-RMK3.webp",
+          "sourceFilename": "Galereya-1130x730-RMK3.webp",
+          "sha256": "3629211aeb7d12f7ea1e120c4876b97f8b2da6486fad72b3272ac7c650bacba7"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/rmk-arena/04.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/e94/gfcjzx06237k65hctls81dhwljm099tq/Galereya-1130x730-RMK4.webp",
+          "sourceFilename": "Galereya-1130x730-RMK4.webp",
+          "sha256": "ec796f466e6268b1fe9a8ec1c3f6f60caeeb2621f83662f8c365faad49ce6e58"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/rmk-arena/05.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/b20/0xxdoswsypxh4byxiuhi5tgbu5zmj11i/Galereya-1130x730-RMK5.webp",
+          "sourceFilename": "Galereya-1130x730-RMK5.webp",
+          "sha256": "8ef5238e3f4d5cdd2e5802b47a2a8c5236927940fd4f4142388ba7cdcf53fd2e"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/rmk-arena/06.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/d52/dnlensg44c1p99sbxa11qvsl7igl26uu/Galereya-1130x730-RMK6.webp",
+          "sourceFilename": "Galereya-1130x730-RMK6.webp",
+          "sha256": "23d9309a6dec5886a8bf4dd5cb4ab8a85b15e4cf0085f3fcd753eeaa398f5f91"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/rmk-arena/07.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/cd3/mp7chd1dv3uz6k9zvw82ruh6538grdow/Galereya-1130x730-RMK7.webp",
+          "sourceFilename": "Galereya-1130x730-RMK7.webp",
+          "sha256": "a0b05ab7f57c631e9d88a008526952dff61f52bb881188c99c687c2ab4a3fce4"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/rmk-arena/08.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/9fb/kpd1423ud6l8egl1qynviwf36ji9pz93/Galereya-1130x730-RMK8.webp",
+          "sourceFilename": "Galereya-1130x730-RMK8.webp",
+          "sha256": "d51ceee0a42107e8f1f17c396d4976de403acf3ec659f06c439f66a4db9f1eab"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/rmk-arena/09.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/c9b/bpx7mb1idlqosioqnogcd87a2kir5h11/Galereya-1130x730-RMK9.webp",
+          "sourceFilename": "Galereya-1130x730-RMK9.webp",
+          "sha256": "7c44632c3304633b02926bd32e4d8d5b7799072f7c514f5238f38d8c904e8111"
+        }
+      ]
+    },
+    {
+      "slug": "ekaterinburg-circus",
+      "title": "Екатеринбургский цирк имени В. И. Филатова",
+      "pageUrl": "https://optimus-city.ru/projects/ekaterinburgskiy-gosudarstvennyy-tsirk-imeni-v-i-filatova/",
+      "type": "project",
+      "images": [
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/01.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/75c/ljf402t3r2ud21b7lpfq0178z6d8cmnb/Galereya-1130x730-0.webp",
+          "sourceFilename": "Galereya-1130x730-0.webp",
+          "sha256": "b55e6ae8a0b41bb032f4aeda37fcc637e9374b0a5eb53e8f815322fcfaf253ed"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/02.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/47a/gl90c8lu808j7te7hqgg2s5kuq42ms77/Galereya-1130x730-1.webp",
+          "sourceFilename": "Galereya-1130x730-1.webp",
+          "sha256": "6debe449d0e69c257d9350b7430a71c69a664881979424bb10783d31a97f78e8"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/03.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/6d0/dty9joguxr2ywd2l1tu682xa3fq38iw8/Galereya-1130x730-2.webp",
+          "sourceFilename": "Galereya-1130x730-2.webp",
+          "sha256": "cbdc9955489a1817526f5fb2020d5ec1a23c4d787460faebb72745be0057fb7a"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/04.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/cd2/qjpu3erolb1kjt7fapyqfonyvobpnf6y/Galereya-1130x730-3.webp",
+          "sourceFilename": "Galereya-1130x730-3.webp",
+          "sha256": "0edf90deb8d3a46f390756612b6b815884182a5176ae9a4b0df3c38ca94eea7f"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/05.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/faf/2wksek256h62n79uvjearnvhkytf5idv/orig.webp",
+          "sourceFilename": "orig.webp",
+          "sha256": "92681ca0d2e8df4827333936e43b73a2323ca2135a7f84cbbe05917567bd3dee"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/06.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/bed/ypde6lenz1eatds8rw1cqzfe72v16f83/TSirk-1.webp",
+          "sourceFilename": "TSirk-1.webp",
+          "sha256": "09e16bb87d1c4d8a239806856ee0fa0702a0dcc7480112448e1541d8fd0c9ad6"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/07.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/b05/v47jdmbqr4mi3p9h1zoj7nfknsd62730/TSirk-2.webp",
+          "sourceFilename": "TSirk-2.webp",
+          "sha256": "1aa4fd16da53b652fc3509aaea2456b1d06e0849a439e1ff0930430c00e8d27e"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/08.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/8fd/hr8d8k0s1r5bp2p3mbs88d6figcxwvck/TSirk-3.webp",
+          "sourceFilename": "TSirk-3.webp",
+          "sha256": "dc4d0c6ec1dccf45e4c3ac9c1e83cca80452885eada5003dce3c246b5704c417"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/09.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/268/0o11cotbkbuslsysoeha1rhy092uz3qc/TSirk-4.webp",
+          "sourceFilename": "TSirk-4.webp",
+          "sha256": "220b68c93ee415d1f2148bbeec80f3d6f74bd93aab8a6da63873db38bbcd54c1"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/10.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/843/0d67i8ruaei3wc8rarfdo919bek5o3n6/TSirk-5.webp",
+          "sourceFilename": "TSirk-5.webp",
+          "sha256": "8b130d54495d9ee35dfd3f9bf97215a756d901e43fe7e57ee64d403605948d33"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/11.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/a5f/bgt3cav1v0tzhf22mk1f0lu1n43h4xtp/TSirk-6.webp",
+          "sourceFilename": "TSirk-6.webp",
+          "sha256": "6df03751ee720671892f167593f0c53ed61c9bbe856dc4bea2ae15dec2ab03c9"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/12.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/80c/blgsw3kaq7dvogil6o5l63d42hx38amd/TSirk-7.webp",
+          "sourceFilename": "TSirk-7.webp",
+          "sha256": "cda91988a82d75ece717caa9b98fba8df90437d492bf5722cea47bc6234a1337"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/ekaterinburg-circus/13.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/7eb/ujz9unpgi87q7tii6yul47qa536zvzac/TSirk-8.webp",
+          "sourceFilename": "TSirk-8.webp",
+          "sha256": "1a0fa55c0206122f7a8cf6de5b274a28ad3c50434e74d2c7d9e8e7f160e7fd7a"
+        }
+      ]
+    },
+    {
+      "slug": "aquatics-palace",
+      "title": "Дворец водных видов спорта",
+      "pageUrl": "https://optimus-city.ru/projects/dvortsa-vodnykh-vidov-sporta/",
+      "type": "project",
+      "images": [
+        {
+          "localPath": "/images/individual/transformer/optimus/aquatics-palace/01.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/fac/022pdu2kq16rj38y1uhw4wdmy4z1hu7b/2ad79c5f_036f_45f9_8.webp",
+          "sourceFilename": "2ad79c5f_036f_45f9_8.webp",
+          "sha256": "a530bf3b6a7433324652ef44ecbc8ef633551e8e2c9dc3482831738112b75d17"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/aquatics-palace/02.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/c7a/wlpkd96zv9dle85mten0d3sybperbc9r/8a1334a8_77da_4df7_b.webp",
+          "sourceFilename": "8a1334a8_77da_4df7_b.webp",
+          "sha256": "a82b1f426bac539f799cb0d43d2f73e0689ece33468e7bd12752e69c63d1b805"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/aquatics-palace/03.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/1fa/jezvgciylde9dk6aknonx2ssnl7064ag/653a4564_9f52_43b2_9.webp",
+          "sourceFilename": "653a4564_9f52_43b2_9.webp",
+          "sha256": "d45b846f10cc0a3adfd7f31cbfe1fbb1d260cd9dc4e33aa493fdd3924cadbdd0"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/aquatics-palace/04.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/fe8/oyrd40s7m68w2e7izun8i7r1vobjhr1d/e4a0ab0d_6186_4f27_9.webp",
+          "sourceFilename": "e4a0ab0d_6186_4f27_9.webp",
+          "sha256": "06f7ddc13f078b734b989ea8cdb0a1982624e55be9d2d7c995c01a884fb371a1"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/aquatics-palace/05.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/e23/9k8cptpvzmlougfs2dd4j9gw48bk5isn/e907b1c8_dfa5_4e30_a.webp",
+          "sourceFilename": "e907b1c8_dfa5_4e30_a.webp",
+          "sha256": "1d2d8fc530024cd09ad62321a055664119feda65c1e77b9d646d0d1de98fbb00"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/aquatics-palace/06.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/62f/xwo2b3kp1vyesjond0bis2w0fxqpc5e8/f75209be_7a24_40a4_8.webp",
+          "sourceFilename": "f75209be_7a24_40a4_8.webp",
+          "sha256": "794e6b47a8fb1574d8de5c75bbf72ccf47b8bdf5d7c55868afe46af3bd6819b2"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/aquatics-palace/07.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/d4e/htgmxukp0fkacet3t29izuob3wylk89i/XXXL.webp",
+          "sourceFilename": "XXXL.webp",
+          "sha256": "2e30201add39460faa8456dc58090450cf62429b037954da99d078b689ec41d5"
+        }
+      ]
+    },
+    {
+      "slug": "congress-hotel",
+      "title": "Конгресс-отель «Екатеринбург»",
+      "pageUrl": "https://optimus-city.ru/projects/kongress-otel-ekaterinburg/",
+      "type": "project",
+      "images": [
+        {
+          "localPath": "/images/individual/transformer/optimus/congress-hotel/01.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/50a/medjsih30hp2jnmt6kxhbk5u23py62hk/2312c457_5b8b_4a29_a.webp",
+          "sourceFilename": "2312c457_5b8b_4a29_a.webp",
+          "sha256": "947eb9d6b88cfefc8b04f59191e52361315792924c731efddbb08b150df2e869"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/congress-hotel/02.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/38d/ojme20hipvnqozrupzqeif9ikeju1f6i/7677db02_a94b_4b89_8.webp",
+          "sourceFilename": "7677db02_a94b_4b89_8.webp",
+          "sha256": "3ecf07f183efc7032a96b8139e1ba3bf2d7b4866a8a64f3c4da757de7008d83b"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/congress-hotel/03.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/6a3/vd77htom95l1vicrrpvv964i33t47chj/b36da96f_836c_47e8_9.webp",
+          "sourceFilename": "b36da96f_836c_47e8_9.webp",
+          "sha256": "25df9ff1856b966e6ef3469a9a574c6c5c7678f18996a689dd65d7d55970a725"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/congress-hotel/04.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/977/0tgr9bzhu1ej7o61qa8gfky0se167xh6/da6259ad_17f4_4d12_9.webp",
+          "sourceFilename": "da6259ad_17f4_4d12_9.webp",
+          "sha256": "023845429e77f7437398ea921685f02d51554d700a81e6dadcd8e04598d460a5"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/congress-hotel/05.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/ae8/eit58ghyzaxj0n3le85a0695xylzsejx/dcf4c626_cec5_4e96_b.webp",
+          "sourceFilename": "dcf4c626_cec5_4e96_b.webp",
+          "sha256": "cec303a717bf61e1e6113c2bda8780790296254bd2660126c6679f7495627dd2"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/congress-hotel/06.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/0a6/wnirng0873jppjb8budlvzssjbnla00z/XXXL.webp",
+          "sourceFilename": "XXXL.webp",
+          "sha256": "39dd6ad17facdd171581b3b5c92dcd517daa10351413ed35bd18d4c8af87deea"
+        }
+      ]
+    },
+    {
+      "slug": "auto-showrooms",
+      "title": "Металлические потолки в автосалонах",
+      "pageUrl": "https://optimus-city.ru/gallery/metallicheskie-potolki-v-avtosalonakh/",
+      "type": "gallery",
+      "images": [
+        {
+          "localPath": "/images/individual/transformer/optimus/auto-showrooms/01.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/7a2/w0vgvqk5gbnbb2g7kmnpkl1ji064oj4d/Galereya-1130x730-1.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-1.webp",
+          "sha256": "392ee4934bccb4db22b929275ccbd16b724982b3f03d21654ca1b280fa29f80e"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/auto-showrooms/02.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/e92/79sottk4sh96za6n3yjurzxykmx13v02/Galereya-1130x730-2.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-2.webp",
+          "sha256": "2a0de3bda5419002e4fe9c830b3b33150754f8bf9596bce113d5d4e387ad1c1b"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/auto-showrooms/03.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/2d4/6utmuaz6rg3s3shrxf645zg54m1lth74/Galereya-1130x730-10.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-10.webp",
+          "sha256": "49b1d34e6627f8a1f28b58346ba56310e011115cffb823926a6591e11cbd1924"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/auto-showrooms/04.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/ca9/0izqo88iwxu1m4k7nx3g04b3hderti0z/Galereya-1130x730-11.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-11.webp",
+          "sha256": "2bb50ee3a3c64b7ed3cfb9b150c1c206b89203453eba29ad01f15eb510995631"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/auto-showrooms/05.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/c6b/3qagm8oacohwiof5rt3tya1g0d7d6v2z/Galereya-1130x730-12.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-12.webp",
+          "sha256": "954b6fc3c090f897c03b4244eb5516dfc17c3ed42cd817adce76cb765561ba33"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/auto-showrooms/06.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/74f/t0clwg7mx9g7aihul8upiao11oiiu7w3/Galereya-1130x730-13.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-13.webp",
+          "sha256": "d88afc1ed8fbb6cb60df07beed592ddc3f35027de1f2e3e0bde16886aab5e9ce"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/auto-showrooms/07.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/49d/tyj8w565zjyv82bpr22rvtw3n7n00ej4/Galereya-1130x730-14.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-14.webp",
+          "sha256": "88aaad7c2db1f96aa0fb84d56ddf61f96af79fba58925ad18633c49137c002ee"
+        }
+      ]
+    },
+    {
+      "slug": "shopping-centers",
+      "title": "Металлические потолки в торговых центрах",
+      "pageUrl": "https://optimus-city.ru/gallery/metallicheskie-potolki-v-torgovykh-tsentrakh/",
+      "type": "gallery",
+      "images": [
+        {
+          "localPath": "/images/individual/transformer/optimus/shopping-centers/01.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/48b/6c2glmrbjm3m7rsl24039p8j3jouq9m5/Galereya-1130x730-1.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-1.webp",
+          "sha256": "9427bbbfef49a10f85d9cb0144fdb9c6bdf978e7490cbc69c2518e6cf1df7f42"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/shopping-centers/02.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/cbf/nhoyaxms0ejbkowu3qtfpznvrl3cndn4/Galereya-1130x730-2.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-2.webp",
+          "sha256": "5c74ce4b2e188832f38b56d07ad82b7c268b2f114599363f3263d32cf2b39667"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/shopping-centers/03.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/8f5/m9w7xsu1vnescif543hyjyn1dmuj1mb1/Galereya-1130x730-3.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-3.webp",
+          "sha256": "db791bd23ba9a42733aabc15ce5def10de87f1136398a5a12b3007fb4e27378d"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/shopping-centers/04.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/598/qouge23mavndh8lnw6q9ot8dtyhcbnu3/Galereya-1130x730-4.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-4.webp",
+          "sha256": "bb72e8491a549dbe546a7ccdb70fd9d1e97dcc38ee7fa6f24b28b89aafe72e95"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/shopping-centers/05.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/3e6/reu04x9xwzkll1pb89b4ohi7olncy3rv/Galereya-1130x730-5.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-5.webp",
+          "sha256": "41bdc9452c30dd04cf8f7a0e846dee2eb2516a15155621cbde302df543519e5a"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/shopping-centers/06.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/4d1/296cfvrcf0kojpi9v1hqgkwuygkjwi8z/Galereya-1130x730-6.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-6.webp",
+          "sha256": "72ed0d2bb44c00a2020ec9b3b9fe46afb14f1b09de8c432eab0ad20bd37d91fe"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/shopping-centers/07.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/c54/hp8w2o7x9cxah91utgdwglu6v0t2ahm2/Galereya-1130x730-7.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-7.webp",
+          "sha256": "b6d66e10c687af038395470336768200402508c51e4775e227b26b4d24977977"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/shopping-centers/08.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/cfd/14bxfpwcc0lf3no642ymqrhudzk23nc2/Galereya-1130x730-8.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-8.webp",
+          "sha256": "5f52756ad5a5effa598aa48d7c2c721e4f7762a3646a5d75a6c3396d703d439a"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/shopping-centers/09.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/1c0/z9ue2s55ksprjfapso3s255wy6sy8dl5/Galereya-1130x730-9.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-9.webp",
+          "sha256": "55a68536384e2ca1c2e0eaea351c907acdafd8721c898509347e6962128bb402"
+        }
+      ]
+    },
+    {
+      "slug": "public-zones",
+      "title": "Общественные зоны и входные группы",
+      "pageUrl": "https://optimus-city.ru/gallery/obshchestvennye-zony-i-vkhodnye-gruppy/",
+      "type": "gallery",
+      "images": [
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/01.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/b3d/ub1tdvyttn4lm6jau3zxqbe36kcx37en/Galereya-1130x730-1.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-1.webp",
+          "sha256": "426105b7e3adae7f47e492fe636226e60a42cbc7e5b7703642bd2b05d2104d65"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/02.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/78e/03vh2yp15gykhu89xixiim9p1smfonop/Galereya-1130x730-2.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-2.webp",
+          "sha256": "f74549c67ff740c3ffd193a73cbe8958ea8dc04b62ec9e77775a27964e7fba21"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/03.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/780/qn8a4ij6xn9n9wmd43rrhi7roqwde9o2/Galereya-1130x730-3.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-3.webp",
+          "sha256": "0534e90fe6787eb50121459e9f96db40c8c11b267f90c6b288b59fe4f73bbc6f"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/04.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/765/0fg7yhzr2u6n6m9wdoxwpmwzgrz9mx7v/Galereya-1130x730-10.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-10.webp",
+          "sha256": "0d5cf9b994336d024b7e7377895100a24f371ddf537a25b7b9da1a468091c95e"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/05.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/6b0/4oa3bt2zkvg791k9j5e216r4iu1fbogu/Galereya-1130x730-11.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-11.webp",
+          "sha256": "20111d579c4317b50109c7740c3ba304780f508bd0c9df61fdf41c0e3ad3f860"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/06.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/23d/fc5onuhjv9eumb60i55m6tuim0q157mf/Galereya-1130x730-12.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-12.webp",
+          "sha256": "ec0a9ec0483fba4dd078ec581c61a9b8b379a8d1f611d5682c0b91ad4ddfa0d0"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/07.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/cec/vda7u87a1zo31m3xl6vl1593wzqnl7wz/Galereya-1130x730-13.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-13.webp",
+          "sha256": "d73df4029ef594b408640142ead7128e7e265e5cf2972db02d257ee7231738bb"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/08.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/749/k5kx00sjyhuhzxyum8gnk37u4342ftei/Galereya-1130x730-14.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-14.webp",
+          "sha256": "27791363dcc34aafa2c28b51e2f9b9b9c9c535f483db7275e7b3fcc19a7762a3"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/09.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/c88/9i5vebwbi4mywlpm8iyx0ucfvp9b9chn/Galereya-1130x730-15.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-15.webp",
+          "sha256": "f7f4082c7abe80540510146731ccbd9a9f43649d4e1f93fdffa0bcdb27ed3a4b"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/10.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/40b/h8j54pftdofsxqhsb801o87ic3vuw71l/Galereya-1130x730-16.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-16.webp",
+          "sha256": "0187a6c845a4a7814ecb013732f7512fecff68d214e1acad2b0ffcf3f9cd019b"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/11.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/ef5/uomja3is9rxowupg3wtajgm21y2dofxs/Galereya-1130x730-17.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-17.webp",
+          "sha256": "41fc6e9e721816ea8065a257b69d10a6601a9fedede8da1d196ed3d30a506267"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/12.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/1cc/0vxamo6k8adp1bl011f29hb2mt0vwmid/Galereya-1130x730-18.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-18.webp",
+          "sha256": "c63e19fc51bcb34d2ed4f251430f8cdb87ccf0a915294498b9e059732d9520d7"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/public-zones/13.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/57c/i9nc4k2qfs1suk7b2gr4oxaeafqhv3bl/Galereya-1130x730-20.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-20.webp",
+          "sha256": "5ea04f53db8acc65407f44402c72c33d850f8a8fa845168f8ba2732e21913f2b"
+        }
+      ]
+    },
+    {
+      "slug": "hotels",
+      "title": "Решения для гостиниц и отелей",
+      "pageUrl": "https://optimus-city.ru/gallery/resheniya-dlya-gostinits-i-oteley/",
+      "type": "gallery",
+      "images": [
+        {
+          "localPath": "/images/individual/transformer/optimus/hotels/01.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/1a9/gzveu6dwwotb45r30j2r31jnjpqmc80g/Galereya-1130x730-1.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-1.webp",
+          "sha256": "135cf9273404a5c529fc5a446bc814aa59bc91f768c81bdfd37525b56a83c7fb"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/hotels/02.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/044/nwj9z3yur593ngrp6xxbkhwkcjgex9y1/Galereya-1130x730-2.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-2.webp",
+          "sha256": "3e2f83f53c1ec43c6a7eeed33c9bea0f1b2f17c2091e492bca35b55760c9ad61"
+        },
+        {
+          "localPath": "/images/individual/transformer/optimus/hotels/03.webp",
+          "sourceUrl": "https://optimus-city.ru/upload/dev2fun.imagecompress/webp/iblock/8c2/f419ci9ewkc3mh0dyaq6aav0j8cjpt9j/Galereya-1130x730-3.webp?v=1.2.10",
+          "sourceFilename": "Galereya-1130x730-3.webp",
+          "sha256": "ec2f0a8bd96484c84fff52e5f405e8a462ad135da47872b8861359cd9b634553"
+        }
+      ]
+    }
+  ]
+}
