@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 132" role="img" aria-labelledby="title description">
+  <title id="title">Prostill — потолочные системы</title>
+  <desc id="description">Знак из трёх металлических потолочных реек и название Prostill</desc>
+  <g transform="translate(4 6)">
+    <path fill="#ff5c35" d="M6 6h28v114H6z"/>
+    <path fill="#ff5c35" d="M31 6h86L99 32H31z"/>
+    <path fill="#f24b25" d="M31 43h70L83 69H31z"/>
+    <path fill="#d83a18" d="M31 80h54l-18 26H31z"/>
+  </g>
+  <text x="142" y="75" fill="#111214" font-family="Montserrat, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="-2">Prostill</text>
+  <text x="146" y="108" fill="#5c6067" font-family="Montserrat, Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="4.6">ПОТОЛОЧНЫЕ СИСТЕМЫ</text>
+</svg>
