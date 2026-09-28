@@ -1,5 +1,5 @@
 (() => {
-  const message = "Формы и серверный поиск отключены в демонстрационной версии. Свяжитесь с нами по телефону или через мессенджер.";
+  const message = "Эта форма требует рабочего PHP-хостинга. В публичной демонстрации отправка отключена.";
   document.addEventListener("submit", (event) => {
     if (!event.target.matches(".rd-mailform, .rd-search")) return;
     event.preventDefault();

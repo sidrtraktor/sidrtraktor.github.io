@@ -480,6 +480,120 @@
   font-size: 14px;
 }
 
+.pro-mobile-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.pro-mobile-contacts .text-phone-mobile-menu1,
+.pro-mobile-email {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.pro-mobile-email {
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pro-mobile-address {
+  max-width: 330px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.pro-mobile-messengers {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.pro-callback-modal {
+  max-height: calc(100vh - 28px);
+  overflow-y: auto;
+}
+
+.pro-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.pro-modal-close .modal__cross {
+  top: 20px;
+  right: 20px;
+}
+
+.pro-callback-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.pro-callback-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 5px 0;
+  color: #4f5359;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+.pro-callback-consent input {
+  flex: 0 0 auto;
+  margin-top: 3px;
+}
+
+.pro-callback-consent a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.pro-callback-status {
+  min-height: 22px;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+.pro-callback-status.is-success {
+  color: #16733f;
+}
+
+.pro-callback-status.is-warning {
+  color: #8b5b00;
+}
+
+.pro-callback-status.is-error {
+  color: #b42318;
+}
+
+.pro-callback-submit[disabled] {
+  opacity: 0.65;
+  cursor: wait;
+}
+
 .footer-bottom-panel .rights {
   line-height: 1.7;
 }
@@ -577,5 +691,10 @@
   .messenger-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .pro-callback-modal {
+    width: calc(100% - 24px);
+    padding: 26px 20px;
   }
 }

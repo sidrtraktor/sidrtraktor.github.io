@@ -32,30 +32,40 @@
 <!-- Yandex.Metrika disabled in local mirror -->
 
       <link rel="stylesheet" href="/css/pro-projects.css">
+      <script defer src="/js/prostill-callback.js"></script>
+      <meta name="prostill-site-mode" content="preview">
   </head>
     <body>
 
     <div class="page">
       <!-- Модальное оконо -->
 
-<div class="modal-okno" data-modal="1">
-   <!--   Svg иконка для закрытия окна  -->
-   <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-						<p class="p11">Обратный звонок</p>
-						<p class="p22">Менеджер свяжется в ближайшее время</p>
-   						<form class="rd-form rd-mailform rd-form-inline oh-desktop" data-form-output="form-output-global" data-form-type="contact" method="post" action="#" class="rd-mailform">
-						  <div class="form-wrap">
-							<label for="contact-name" class="form-label">Имя</label>
-							<input id="contact-name" type="text" name="name" data-constraints="@Required" class="form-input">
-						  </div>
-						  <div class="form-wrap">
-							<label for="contact-phone" class="form-label">Телефон</label>
-							<input id="contact-phone" type="text" name="phone" data-constraints="@Required" class="form-input">
-						  </div>
-						  
-						  <button type="submit" class="button button-primary js-modal-close">Отправить</button>
-						</form>
-						<p class="p33">Оставляя заявку даете согласие на обработку <a style="text-decoration: underline; color: #151515;" href="https://carusflooring.ru/politique-de-confidentialite.html">персональных данных</a></p>
+<div class="modal-okno pro-callback-modal" data-modal="1" role="dialog" aria-modal="true" aria-labelledby="pro-callback-title">
+  <button class="pro-modal-close js-modal-close" type="button" aria-label="Закрыть окно">
+    <svg class="modal__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+  </button>
+  <p class="p11" id="pro-callback-title">Заказать звонок</p>
+  <p class="p22">Оставьте номер — менеджер свяжется с вами в ближайшее время.</p>
+  <form class="rd-form pro-callback-form" method="post" action="#" data-prostill-callback>
+    <div class="form-wrap">
+      <label for="pro-callback-name" class="form-label">Имя</label>
+      <input id="pro-callback-name" type="text" name="name" autocomplete="name" maxlength="80" required class="form-input">
+    </div>
+    <div class="form-wrap">
+      <label for="pro-callback-phone" class="form-label">Телефон</label>
+      <input id="pro-callback-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="40" required class="form-input">
+    </div>
+    <div class="pro-callback-honeypot" aria-hidden="true">
+      <label for="pro-callback-website">Сайт</label>
+      <input id="pro-callback-website" type="text" name="website" tabindex="-1" autocomplete="off">
+    </div>
+    <label class="pro-callback-consent">
+      <input type="checkbox" name="consent" value="1" required>
+      <span>Согласен на обработку <a href="https://carusflooring.ru/politique-de-confidentialite.html" target="_blank" rel="noopener noreferrer">персональных данных</a></span>
+    </label>
+    <button type="submit" class="button button-primary pro-callback-submit">Отправить</button>
+    <div class="pro-callback-status" role="status" aria-live="polite"></div>
+  </form>
 </div>
 
 
@@ -107,14 +117,15 @@
 </ul>
 
 
-                    <div class="mobile-menu-social">
-                    
-                      <a href="tel:+79202780201" class="text-phone-mobile-menu1">+7 (920) 278-02-01</a>
-                      
-                       <div class="text-phone-mobile-menu2"><a rel="nofollow" target="_blank" href="tel:+79202780201">+7 (920) 278-02-01</a><br></div>
-					  <a rel="nofollow" target="_blank" href="https://t.me/hodanetzky_stas" class="icon icon-telegram"></a>
-				   <a rel="nofollow" target="_blank" href="https://max.ru/u/f9LHodD0cOInmBibV7SR25Dd6ebDkjSuRt7deD7Jef0h9Q-NWHyJ1ejGwlc" class="icon icon-max"></a>
-                    </div>
+                    <div class="mobile-menu-social pro-mobile-contacts">
+  <a href="tel:+79202780201" class="text-phone-mobile-menu1">+7 (920) 278-02-01</a>
+  <a href="mailto:info@prostill.ru" class="pro-mobile-email">info@prostill.ru</a>
+  <p class="pro-mobile-address">г. Москва, Рязанский проспект, д. 3б, офис 409</p>
+  <div class="pro-mobile-messengers" aria-label="Мессенджеры">
+    <a rel="nofollow noopener noreferrer" target="_blank" href="https://t.me/hodanetzky_stas" class="icon icon-telegram" aria-label="Telegram"></a>
+    <a rel="nofollow noopener noreferrer" target="_blank" href="https://max.ru/u/f9LHodD0cOInmBibV7SR25Dd6ebDkjSuRt7deD7Jef0h9Q-NWHyJ1ejGwlc" class="icon icon-max" aria-label="MAX"></a>
+  </div>
+</div>
                     <div class="button-wrap"><a class="button button-default-outline button-wapasha button-mobile js-open-modal" href="#" data-modal="1">Заказать звонок</a></div>
                   </div>
                 </div>
@@ -662,6 +673,9 @@
   </div>
   <div class="contact-classic-item contact-classic-item-phones">
     <a href="tel:+79202780201">+7 (920) 278-02-01</a>
+  </div>
+  <div class="contact-classic-item">
+    <a href="mailto:info@prostill.ru">info@prostill.ru</a>
   </div>
   <div class="contact-classic-item">
     <p>г. Москва, Рязанский проспект, д. 3б, офис 409</p>
