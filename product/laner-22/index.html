@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+<script data-local-http-redirect>
+  (function () {
+    if (window.location.protocol !== "file:") return;
+    var decodedPath = decodeURIComponent(window.location.pathname);
+    var publicMarker = "/public/";
+    var markerIndex = decodedPath.lastIndexOf(publicMarker);
+    if (markerIndex < 0) return;
+    var relativePath = decodedPath.slice(markerIndex + publicMarker.length);
+    if (relativePath === "index.html") relativePath = "";
+    else if (relativePath.endsWith("/index.html")) relativePath = relativePath.slice(0, -"index.html".length);
+    window.location.replace("http://127.0.0.1:4173/" + relativePath + window.location.search + window.location.hash);
+  }());
+</script>
+    <title>404 страница</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/favicon-prostill.svg" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="/vendor/fonts.googleapis.com/css-f1982d0387.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css" id="main-styles-link">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+      <link rel="stylesheet" href="/css/pro-projects.css">
+  </head>
+  <body>
+
+    <div class="page">
+      <section class="section section-single section-404 novi-background bg-overlay-3-41 novi-background context-dark">
+        <div class="section-single-inner">
+          <header class="section-single-header page-header">
+            <div class="page-head-inner"><a class="brand" href="/"><img class="brand-logo-dark" src="/images/logo-prostill-dark.svg" alt="Prostill — потолочные системы" width="190" height="43"/><img class="brand-logo-light" src="/images/logo-prostill-light.svg" alt="Prostill — потолочные системы" width="190" height="43"/></a>
+            </div>
+          </header>
+          <div class="section-single-main">
+            <div class="container">
+              <h1 class="title-modern">Страница удалена<span>404</span></h1>
+              <p class="big text-spacing-25">Возможно, вы ошиблись адресом или страница переехала</p><a class="button button-primary button-ujarak" href="/">Перейти на главную страницу</a>
+            </div>
+          </div>
+          <div class="section-single-footer">
+            <div class="container text-center">
+             
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="box-position" style="background-image: url(/images/landing-1-2070x1050.jpg);"></div>
+      </section>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="/js/core.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/pages-preview.js"></script>
+</body>
+</html>

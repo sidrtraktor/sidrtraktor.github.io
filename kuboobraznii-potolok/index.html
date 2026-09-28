@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="ru">
+
+<head>
+<script data-local-http-redirect>
+  (function () {
+    if (window.location.protocol !== "file:") return;
+    var decodedPath = decodeURIComponent(window.location.pathname);
+    var publicMarker = "/public/";
+    var markerIndex = decodedPath.lastIndexOf(publicMarker);
+    if (markerIndex < 0) return;
+    var relativePath = decodedPath.slice(markerIndex + publicMarker.length);
+    if (relativePath === "index.html") relativePath = "";
+    else if (relativePath.endsWith("/index.html")) relativePath = relativePath.slice(0, -"index.html".length);
+    window.location.replace("http://127.0.0.1:4173/" + relativePath + window.location.search + window.location.hash);
+  }());
+</script>
+  <title>Рейка</title>
+  <meta name="description" content="Рейка">
+
+  <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/favicon-prostill.svg" type="image/svg+xml">
+	<link href="/vendor/fonts.googleapis.com/css2-14053b47ee.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css?945115442" id="main-styles-link">
+    
+   <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+<!-- Yandex.Metrika disabled in local mirror -->
+
+      <link rel="stylesheet" href="/css/pro-projects.css">
+  </head>
+    <body>
+
+    <div class="page">
+      <!-- Модальное оконо -->
+
+<div class="modal-okno" data-modal="1">
+   <!--   Svg иконка для закрытия окна  -->
+   <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+						<p class="p11">Обратный звонок</p>
+						<p class="p22">Менеджер свяжется в ближайшее время</p>
+   						<form class="rd-form rd-mailform rd-form-inline oh-desktop" data-form-output="form-output-global" data-form-type="contact" method="post" action="#" class="rd-mailform">
+						  <div class="form-wrap">
+							<label for="contact-name" class="form-label">Имя</label>
+							<input id="contact-name" type="text" name="name" data-constraints="@Required" class="form-input">
+						  </div>
+						  <div class="form-wrap">
+							<label for="contact-phone" class="form-label">Телефон</label>
+							<input id="contact-phone" type="text" name="phone" data-constraints="@Required" class="form-input">
+						  </div>
+						  
+						  <button type="submit" class="button button-primary js-modal-close">Отправить</button>
+						</form>
+						<p class="p33">Оставляя заявку даете согласие на обработку <a style="text-decoration: underline; color: #151515;" href="https://carusflooring.ru/politique-de-confidentialite.html">персональных данных</a></p>
+</div>
+
+
+<!-- Подложка под модальным окном -->
+<div class="overlay js-overlay-modal"></div>
+
+
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div><a href="tel:+79202780201" class="text-phone-header-mobile">+7 (920) 278-02-01</a></div>
+                  <div class="rd-navbar-brand"><a href="/"><img src="/images/logo-prostill-light.svg" alt="Prostill — потолочные системы" width="165" height="60" /></a></div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+  <li class="rd-nav-item"><a class="rd-nav-link" href="/#products-all">Потолки</a>
+    <ul class="rd-menu rd-navbar-dropdown">
+      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="/kuboobraznii-potolok/">Рейка</a></li>
+      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="/potolochnye-paneli-hook-on-prostill/">Hook-On</a></li>
+      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="/fasadnaya-reyka/">Фасадная рейка</a></li>
+    </ul>
+  </li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="/individual-solutions/">Индивидуальные решения</a>
+    <ul class="rd-menu rd-navbar-dropdown">
+      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="/individual-solutions/#columns">Колонны</a></li>
+      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="/individual-solutions/#wall-cladding">Облицовка стен</a></li>
+      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="/individual-solutions/#perforated-panels">Перфорированные панели</a></li>
+      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="/fasadnaya-reyka/">Фасадная рейка</a></li>
+      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="/transformer/">Потолки ТРАНСФОРМЕР</a></li>
+      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="/decorative-steel-ceilings/">Потолки из нержавеющей стали</a></li>
+    </ul>
+  </li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="/color/">Цвета</a></li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="/calculator/" target="_blank">Калькулятор 3D</a></li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="/portfolio/">Портфолио</a></li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="/about/">О компании</a></li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="/contacts/">Контакты</a></li>
+</ul>
+
+
+                    <div class="mobile-menu-social">
+                    
+                      <a href="tel:+79202780201" class="text-phone-mobile-menu1">+7 (920) 278-02-01</a>
+                      
+                       <div class="text-phone-mobile-menu2"><a rel="nofollow" target="_blank" href="tel:+79202780201">+7 (920) 278-02-01</a><br></div>
+					  <a rel="nofollow" target="_blank" href="https://t.me/hodanetzky_stas" class="icon icon-telegram"></a>
+				   <a rel="nofollow" target="_blank" href="https://max.ru/u/f9LHodD0cOInmBibV7SR25Dd6ebDkjSuRt7deD7Jef0h9Q-NWHyJ1ejGwlc" class="icon icon-max"></a>
+                    </div>
+                    <div class="button-wrap"><a class="button button-default-outline button-wapasha button-mobile js-open-modal" href="#" data-modal="1">Заказать звонок</a></div>
+                  </div>
+                </div>
+
+                <div class="header-right-container">
+                  <div class="header-contacts">
+                    
+                  
+                    <a href="tel:+79202780201" class="text-phone-header">+7 (920) 278-02-01</a>
+                  </div>
+                  <div class="header-social">
+                   <a rel="nofollow" target="_blank" href="https://t.me/hodanetzky_stas" class="icon icon-telegram"></a>
+				   <a rel="nofollow" target="_blank" href="https://max.ru/u/f9LHodD0cOInmBibV7SR25Dd6ebDkjSuRt7deD7Jef0h9Q-NWHyJ1ejGwlc" class="icon icon-max"></a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+  <section class="section section-xxl-1 box-position-wrap context-dark text-center home-slider box-dark1">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <h1 class="text-spacing-50 text-home-h1 font-weight-bold wow fadeInLeft">РЕЙКА</h1>
+          <div class="price-slider-home">Цена от 2190 руб. за квадратный метр</div>
+          <div class="button button-icon button-icon-left button-primary button-pipaluk buttom-my-1"><a href="#" class="js-open-modal buttom-text-white" data-modal="1">Рассчитать стоимость</a></div>
+
+
+
+
+
+        </div>
+
+      </div>
+      <span class="arrow-down"></span>
+    </div>
+    <div class="box-position" style="background-image: url(/images/kuboobraznii-potolki.jpg);"></div>
+
+  </section>
+
+  <section class="info-product section section-xl pb-0">
+    <div class="container">
+      <h2>Потолочная система КУБ</h2>
+
+      <div class="info-product-wrap">
+        <div class="info-product-about">
+          <img src="/images/kuboobraznye-reyki.png" alt="Рейка">
+        </div>
+        
+        <div class="info-product-render"><img src="/images/cafe.jpg" alt="Рейка"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="info-product section section-xl">
+    <div class="container">
+      <h2>Реечная система куб с декоративными вставками между реек</h2>
+
+      <div class="info-product-wrap">
+        <div class="info-product-render"><img src="/images/hospital.jpg" alt="Рейка">
+        <p class="info-product-notice">Рейка 50х100(h) цвет RAL 9003 с черными декоративными вставками шириной 50 мм</p>
+      </div>
+
+        <div class="info-product-about">
+          <div class="info-product-text">
+            <p>Потолочная система КУБ с использованием черных декоративных вставок между реек.</p>
+          </div>
+          <img src="/images/kub-s-dekorativnymi-vstavkami-mezhdu-reek.png" alt="Рейка">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="info-product section">
+    <div class="container">
+      <h2>Кубообразные рейки на жесткой системе крепления</h2>
+
+      <div class="info-product-wrap">
+        <div class="info-product-about">
+          <div class="info-product-text">
+            <p>Надежное крепление с возможностью использования на улице.</p>
+          </div>
+          <img src="/images/kuboobraznye-reyki-na-zhestkoy-sisteme-krepleniya.png" alt="Рейка">
+        </div>
+        
+        <div class="info-product-render"><img src="/images/kuboobraznii-potolki-3.jpg" alt="Рейка">
+        <p class="info-product-notice">Рейка 40х60(h) с зазором 40 мм, цвет RAL 702</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="info-product section section-xl">
+    <div class="container">
+      <h2>Кубообразные рейки на пристенном коридорном уголке</h2>
+
+      <div class="info-product-wrap">
+        <div class="info-product-render"><img src="/images/kuboobraznii-potolki-4.jpg" alt="Рейка">
+        <p class="info-product-notice">Рейка 30х85(h) с зазором 30 мм, цвет RAL 9003. Ширина пристенного профиля 70 мм</p>
+      </div>
+
+        <div class="info-product-about">
+          <div class="info-product-text">
+            <ul>
+              <li>Устанавливается только уголок без подвесов и стрингеров.</li>
+              <li>Быстрый и простой монтаж.</li>
+              <li>Свободный доступ к коммуникациям обеспечивается простым поднятием реек.</li>
+            </ul>
+          </div>
+          <img src="/images/kuboobraznye-reyki-na-pristennom-koridornom-ugolke.png" alt="Рейка">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="info-product section section-xl pt-0">
+    <div class="container">
+      <h2>Рейки на стену</h2>
+
+      <div class="info-product-wrap">
+        <div class="info-product-about">
+          <img class="full-image" src="/images/94f98e29-5026-4c39-966c-a29f23d95fff.jpg" alt="Рейка">
+        </div>
+
+        <div class="info-product-render"><img src="/images/kuboobraznii-potolki-2.jpg" alt="Рейка"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section single service-->
+  <section class="section bg-default sizes">
+    <h2>Размеры реек</h2>
+    <div class="container">
+      <div class="sizes-container">
+        <img src="/images/cube-products-2.png" alt="" width="100%" height="">
+        <span class="sizes-box sizes-box-length">Длина: от 1 м до 6 м</span>
+        <span class="sizes-box sizes-box-distance">Расстояние: от 2 - 20 см</span>
+        <span class="sizes-box sizes-box-height">Высота: от 2 до 20 см</span>
+        <span class="sizes-box sizes-box-width">Ширина: от 2 до 20 см</span>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="calculator-wrapper" class="section-xl">
+    <div class="container">
+      <div class="calculator-box">
+        <div class="calculator-form col-12 col-lg-4">
+          <label for="width">Ширина рейки</label>
+          <select class="protected" name="Ширина" id="width">
+            <option value="30">30 мм</option>
+            <option value="50">50 мм</option>
+            <option value="80">80 мм</option>
+            <option value="120">120 мм</option>
+            <option value="170">170 мм</option>
+          </select>
+          <label for="height">Высота рейки</label>
+          <select class="protected" name="Высота" id="height">
+            <option value="40">38 мм</option>
+            <option value="50">50 мм</option>
+            <option value="85">85 мм</option>
+            <option value="110">110 мм</option>
+            <option value="160">160 мм</option>
+            <option value="200">200 мм</option>
+          </select>
+          <label for="distance">Расстояние между рейками</label>
+          <select class="protected" name="Расстояние между рейками" id="distance">
+            <option value="20">20 мм</option>
+          </select>
+          <label for="color">Цвет</label>
+          <select class="protected" name="Цвет" id="color">
+            <option value="dub">Дерево (дуб)</option>
+            <option value="ral9003">Ral 9003 (белый)</option>
+            <option value="ral9005">Ral 9005 (черный)</option>
+            <option value="ral7016">Ral 7016 (серый)</option>
+          </select>
+        </div>
+
+
+        <div id="result" class="col-12 col-lg-8" data-lightgallery="group">
+          <article class="thumbnail thumbnail-mary thumbnail-mary-2 thumbnail-mary-3">
+            <div class="thumbnail-mary-figure"><img src="/images/calcu/30-38-20/30-38-20 1.jpg" alt="">
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="/images/calcu/30-38-20/30-38-20 1.jpg" data-lightgallery="item"><img src="/images/calcu/30-38-20/30-38-20 1.jpg" alt=""></a>
+            </div>
+          </article>
+          <article class="thumbnail thumbnail-mary thumbnail-mary-2 thumbnail-mary-3">
+            <div class="thumbnail-mary-figure"><img src="/images/calcu/30-38-20/30-38-20 2.jpg" alt="">
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="/images/calcu/30-38-20/30-38-20 2.jpg" data-lightgallery="item"><img src="/images/calcu/30-38-20/30-38-20 2.jpg" alt=""></a>
+            </div>
+          </article>
+          <article class="thumbnail thumbnail-mary thumbnail-mary-2 thumbnail-mary-3">
+            <div class="thumbnail-mary-figure"><img src="/images/calcu/30-38-20/30-38-20 3.jpg" alt="">
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="/images/calcu/30-38-20/30-38-20 3.jpg" data-lightgallery="item"><img src="/images/calcu/30-38-20/30-38-20 3.jpg" alt=""></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FOR COPY 29.06 -->
+
+  <noindex>
+    <section class="section section-xl section-last bg-dark border-radius-default">
+      <div class="container">
+        <h2>Под дерево</h2>
+
+        <div class="row row-30 row-xl color-gallaery wood-color" data-lightgallery="group">
+
+          
+      
+           
+       			<div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/14051АМ-54.jpg" data-lightgallery="item"><img src="/images/wood/14051АМ-54-300-500.jpg" alt=""></a>
+				  <p>Ель карпатская<br>14051АМ-54</p>
+                </article>
+              </div>
+           <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/22-60112-2930-0-110.jpg" data-lightgallery="item"><img src="/images/wood/22-60112-2930-0-110-300-500.jpg" alt=""></a>
+				  <p>Орех Золотой</p>
+                </article>
+              </div>
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/14068АМ-02.jpg" data-lightgallery="item"><img src="/images/wood/14068АМ-02-300-500.jpg" alt=""></a>
+				  <p>Мореная береза<br>14068АМ-02</p>
+                </article>
+              </div>
+			
+			<div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/14077АМ-08.jpg" data-lightgallery="item"><img src="/images/wood/14077АМ-08-300-500.jpg" alt=""></a>
+				  <p>Дуб жемчуг<br>14077АМ-08</p>
+                </article>
+              </div>
+         
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/14079-04.jpg" data-lightgallery="item"><img src="/images/wood/14079-04-300-500.jpg" alt=""></a>
+				  <p>Спил седой<br>14079-04</p>
+                </article>
+              </div>
+       			 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/15110-14.jpg" data-lightgallery="item"><img src="/images/wood/15110-14-300-500.jpg" alt=""></a>
+				  <p>Миланский орех<br>15110-14</p>
+                </article>
+              </div>
+			
+				
+				
+				<div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/15111-14.jpg" data-lightgallery="item"><img src="/images/wood/15111-14-300-500.jpg" alt=""></a>
+				  <p>Итальянский орех<br>15111-14</p>
+                </article>
+              </div>
+         
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/17433М-54.jpg" data-lightgallery="item"><img src="/images/wood/17433М-54-300-500.jpg" alt=""></a>
+				  <p>Орех структурный<br>17433АМ-54</p>
+                </article>
+              </div>
+       			 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/17522АМ-54.jpg" data-lightgallery="item"><img src="/images/wood/17522АМ-54-300-500.jpg" alt=""></a>
+				  <p>Капучино мелинга<br>17522АМ-54</p>
+                </article>
+              </div>
+			 <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/24005АМ-02.jpg" data-lightgallery="item"><img src="/images/wood/24005АМ-02-300-500.jpg" alt=""></a>
+				  <p>Дуб Русский Коричневый<br>24005АМ-02</p>
+                </article>
+              </div>
+			  		   <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/24004АМ-02.jpg" data-lightgallery="item"><img src="/images/wood/24004АМ-02-300-500.jpg" alt=""></a>
+				  <p>Дуб Русский Золотой<br>24004АМ-02</p>
+                </article>
+              </div>
+			        <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/21155АМ-08.jpg" data-lightgallery="item"><img src="/images/wood/21155АМ-08-300-500.jpg" alt=""></a>
+				  <p>Дуб Амбер<br>21155АМ-08</p>
+                </article>
+              </div>
+       			 
+			<div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/17524-58.jpg" data-lightgallery="item"><img src="/images/wood/17524-58-300-500.jpg" alt=""></a>
+				  <p>Дуб светлый<br>17524-58</p>
+                </article>
+              </div>
+         
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/17526-58.jpg" data-lightgallery="item"><img src="/images/wood/17526-58-300-500.jpg" alt=""></a>
+				  <p>Дуб серый<br>17526-58</p>
+                </article>
+              </div>
+       			 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/18544Т-58.jpg" data-lightgallery="item"><img src="/images/wood/18544Т-58-300-500.jpg" alt=""></a>
+				  <p>Орех коньяк<br>18544Т-58</p>
+                </article>
+              </div>
+				
+				
+				
+				
+				<div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/18563АМ-54.jpg" data-lightgallery="item"><img src="/images/wood/18563АМ-54-300-500.jpg" alt=""></a>
+				  <p>Орех пепельный<br>18563АМ-54</p>
+                </article>
+              </div>
+         
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/18568АМ-54.jpg" data-lightgallery="item"><img src="/images/wood/18568АМ-54-300-500.jpg" alt=""></a>
+				  <p>Кедр серый<br>18568АМ-54</p>
+                </article>
+              </div>
+       			 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/18578АМ-54.jpg" data-lightgallery="item"><img src="/images/wood/18578АМ-54-300-500.jpg" alt=""></a>
+				  <p>Серый орех<br>18578АМ-54</p>
+                </article>
+              </div>
+			    <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/21125АМ-26.jpg" data-lightgallery="item"><img src="/images/wood/21125АМ-26-300-500.jpg" alt=""></a>
+				  <p>Американский Орех (под заказ)<br>21125АМ-26</p>
+                </article>
+              </div>
+			<div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/20065АМ-54.jpg" data-lightgallery="item"><img src="/images/wood/20065АМ-54-300-500.jpg" alt=""></a>
+				  <p>Лиственница белая<br>20065АМ-54</p>
+                </article>
+              </div>
+         
+            
+       			 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/20076АМ-54.jpg" data-lightgallery="item"><img src="/images/wood/20076АМ-54-300-500.jpg" alt=""></a>
+				  <p>Лиственница кремовая<br>20076АМ-54</p>
+                </article>
+              </div>
+				
+				
+				
+				
+				
+					
+				
+				
+       			 
+          
+			
+			<div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/21129АМ-26.jpg" data-lightgallery="item"><img src="/images/wood/21129АМ-26-300-500.jpg" alt=""></a>
+				  <p>Пепельный Орех<br>21129АМ-26</p>
+                </article>
+              </div>
+         
+        
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/22039-64.jpg" data-lightgallery="item"><img src="/images/wood/22039-64-300-500.jpg" alt=""></a>
+				  <p>Ель альпийская<br>22039АМ-64</p>
+                </article>
+              </div>
+				
+				   <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/23002.jpg" data-lightgallery="item"><img src="/images/wood/23002-300-500.jpg" alt=""></a>
+				  <p>Санторини Белый<br>23002АМ-64</p>
+                </article>
+              </div>
+       			 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/24001АМ-02.jpg" data-lightgallery="item"><img src="/images/wood/24001АМ-02-300-500.jpg" alt=""></a>
+				  <p>Дуб Русский Светло-серый<br>24001АМ-02</p>
+                </article>
+              </div>
+				
+				
+       
+              
+			  
+		
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/24002АМ-02.jpg" data-lightgallery="item"><img src="/images/wood/24002АМ-02-300-500.jpg" alt=""></a>
+				  <p>Дуб Русский Серый<br>24002АМ-02</p>
+                </article>
+              </div>
+			  
+	
+ 
+           
+             
+		
+			   
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/24007АМ-64.jpg" data-lightgallery="item"><img src="/images/wood/24007АМ-64-300-500.jpg" alt=""></a>
+				  <p>Дуб Винтаж Серый<br>24007АМ-64</p>
+                </article>
+              </div>
+			  
+				<div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/24008АМ-64.jpg" data-lightgallery="item"><img src="/images/wood/24008АМ-64-300-500.jpg" alt=""></a>
+				  <p>Дуб Винтаж Светло-серый<br>24008АМ-64</p>
+                </article>
+              </div>
+			     <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/7038А-01.jpg" data-lightgallery="item"><img src="/images/wood/7038А-01-300-500.jpg" alt=""></a>
+				  <p>Серый Агат<br>7038А-01</p>
+                </article>
+              </div>
+			  <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/21091АМ-01.jpg" data-lightgallery="item"><img src="/images/wood/21091АМ-01-300-500.jpg" alt=""></a>
+				  <p>Бетон Берлин<br>21091АМ-01</p>
+                </article>
+              </div>
+           <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/20070А-63.jpg" data-lightgallery="item"><img src="/images/wood/20070А-63-300-500.jpg" alt=""></a>
+				  <p>Бетон<br>20070А-63</p>
+                </article>
+              </div>
+          
+			   <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/24009-99.jpg" data-lightgallery="item"><img src="/images/wood/24009-99-300-500.jpg" alt=""></a>
+				  <p>Мрамор Бежевый<br>24009-99</p>
+                </article>
+              </div>
+			      <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/21121АМ-63.jpg" data-lightgallery="item"><img src="/images/wood/21121АМ-63-300-500.jpg" alt=""></a>
+				  <p>Бетон Лофт тёмный<br>21121АМ-63</p>
+                </article>
+              </div>
+             <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/7037А-01.jpg" data-lightgallery="item"><img src="/images/wood/7037А-01-300-500.jpg" alt=""></a>
+				  <p>Темный Агат<br>7037А-01</p>
+                </article>
+              </div>
+			  
+			  
+			    <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/126.jpg" data-lightgallery="item"><img src="/images/wood/126-300-500.jpg" alt=""></a>
+				  <p>126 Дуб Шале Натуральный</p>
+                </article>
+              </div>
+			 <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/603.jpg" data-lightgallery="item"><img src="/images/wood/603-300-500.jpg" alt=""></a>
+				  <p>603 Орех Пекан медовый стронг</p>
+                </article>
+              </div>
+			   
+       			 <div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/604.jpg" data-lightgallery="item"><img src="/images/wood/604-300-500.jpg" alt=""></a>
+				  <p>604 Орех Пекан сливочный стронг</p>
+                </article>
+              </div>
+			  	<div class="oh-desktop">
+                <article class=""><a class="" href="/images/wood/602.jpg" data-lightgallery="item"><img src="/images/wood/602-300-500.jpg" alt=""></a>
+				  <p>602 Орех Пекан шоколад стронг</p>
+                </article>
+              </div>
+			  
+			
+       
+        </div>
+		<div class="button-wrap">
+        <a class="button button-sm button-default-outline button-wapasha but-color-white" href="/color/">Все цвета</a>
+      </div>
+      </div>
+    </section>
+  </noindex>
+
+  	 <section class="section section-xl section-last bg-default">
+        <div class="container">
+		<h2>Цвета RAL</h2>
+   
+          <div class="row row-30 row-xl color-gallaery" data-lightgallery="group">
+				
+       
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL1014.jpg" data-lightgallery="item"><img src="/images/RAL1014.jpg" alt=""></a>
+				  <a>RAL1014</a>
+                </article>
+              </div>
+         
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL1015.jpg" data-lightgallery="item"><img src="/images/RAL1015.jpg" alt=""></a>
+				  <a>RAL1015</a>
+                </article>
+              </div>
+       			 
+        
+			   <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL3005.jpg" data-lightgallery="item"><img src="/images/RAL3005.jpg" alt=""></a>
+				  <a>RAL3005</a>
+                </article>
+              </div>
+         
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL3009.jpg" data-lightgallery="item"><img src="/images/RAL3009.jpg" alt=""></a>
+				  <a>RAL3009</a>
+                </article>
+              </div>
+       			 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL3011.jpg" data-lightgallery="item"><img src="/images/RAL3011.jpg" alt=""></a>
+				  <a>RAL3011</a>
+                </article>
+              </div>
+        
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL5005.jpg" data-lightgallery="item"><img src="/images/RAL5005.jpg" alt=""></a>
+				  <a>RAL5005</a>
+                </article>
+              </div>
+
+            
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL6002.jpg" data-lightgallery="item"><img src="/images/RAL6002.jpg" alt=""></a>
+				  <a>RAL6002</a>
+                </article>
+              </div>
+        
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL6005.jpg" data-lightgallery="item"><img src="/images/RAL6005.jpg" alt=""></a>
+				  <a>RAL6005</a>
+                </article>
+              </div>
+			  
+		
+       			 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL7004.jpg" data-lightgallery="item"><img src="/images/RAL7004.jpg" alt=""></a>
+				  <a>RAL7004</a>
+                </article>
+              </div>
+        
+
+			   <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL7024.jpg" data-lightgallery="item"><img src="/images/RAL7024.jpg" alt=""></a>
+				  <a>RAL7024</a>
+                </article>
+              </div>
+       			 
+				   <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL7032.jpg" data-lightgallery="item"><img src="/images/RAL7032.jpg" alt=""></a>
+				  <a>RAL7032</a>
+                </article>
+              </div>
+				 
+				    <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL7035.jpg" data-lightgallery="item"><img src="/images/RAL7035.jpg" alt=""></a>
+				  <a>RAL7035</a>
+                </article>
+              </div>
+       			 
+				   <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL7038.jpg" data-lightgallery="item"><img src="/images/RAL7038.jpg" alt=""></a>
+				  <a>RAL7038</a>
+                </article>
+              </div>
+				 
+				 
+				 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL8004.jpg" data-lightgallery="item"><img src="/images/RAL8004.jpg" alt=""></a>
+				  <a>RAL8004</a>
+                </article>
+              </div>
+        
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL8024.jpg" data-lightgallery="item"><img src="/images/RAL8024.jpg" alt=""></a>
+				  <a>RAL8024</a>
+                </article>
+              </div>
+			  
+			   <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL8017.jpg" data-lightgallery="item"><img src="/images/RAL8017.jpg" alt=""></a>
+				  <a>RAL8017</a>
+                </article>
+              </div>
+         
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL8019.jpg" data-lightgallery="item"><img src="/images/RAL8019.jpg" alt=""></a>
+				  <a>RAL8019</a>
+                </article>
+              </div>
+       			 
+
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL9002.jpg" data-lightgallery="item"><img src="/images/RAL9002.jpg" alt=""></a>
+				  <a>RAL9002</a>
+                </article>
+              </div>
+			  
+			    <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL9003.jpg" data-lightgallery="item"><img style="border: 1px solid #ddd;" src="/images/RAL9003.jpg" alt=""></a>
+				  <a>RAL9003</a>
+                </article>
+              </div>
+       			 
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL9005.jpg" data-lightgallery="item"><img src="/images/RAL9005.jpg" alt=""></a>
+				  <a>RAL9005</a>
+                </article>
+              </div>
+        
+              <div class="oh-desktop">
+                <article class=""><a class="" href="/images/RAL9006.jpg" data-lightgallery="item"><img src="/images/RAL9006.jpg" alt=""></a>
+				  <a>RAL9006</a>
+                </article>
+              </div>
+			  
+			  <div class="oh-desktop">
+                <article class=""><a class="" href="/images/multi-color.jpg" data-lightgallery="item"><img src="/images/multi-color.jpg" alt=""></a>
+				  <a>Любой цвет</a>
+                </article>
+              </div>
+			  
+
+          </div>
+
+        </div>
+      </section>
+
+  <!-- Section CTA 2-->
+  <section class="section section-xl pt-0 bg-default text-center">
+    <div class="container">
+      <div class="about-content">
+        <h2>О компании</h2>
+        <div class="about-content-item">
+          <p><b>Собственное производство</b> в Москве</p>
+        </div>
+        <div class="about-content-item">
+          <p>
+            <b>Сертификат пожарной безопасности</b> КМ1 и НГ
+          </p>
+        </div>
+        <div class="about-content-item">
+          <p>Более <b> 40 текстур дерева </b></p>
+        </div>
+        <div class="about-content-item">
+          <p>Средний срок изготовления <b>10 рабочих дней</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid Gallery-->
+  <section class="section section-xl section-fluid bg-default text-center isotope-wrap works bg-white">
+    <div class="container-fluid">
+      <h2 class="wow fadeInLeft">Примеры работ</h2>
+
+      <div class="row row-30 row-isotope isotope" data-lightgallery="group">
+        <div class="col-sm-6 col-md-4 col-xl-3 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-md">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-10-mini.jpg" alt="" width="420" height="330" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/upload/20240729/X6Vs7nmiPz2dIW4yrFTOQoYuwqN5Ch.jpg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-10-mini.jpg" alt="" width="420" height="330" /></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-3 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-md">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-30-mini.jpg" alt="" width="420" height="330" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/upload/20240729/ot0IdfvkLBinK3rNMeJXmqzxaYj4sG.jpg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-30-mini.jpg" alt="" width="420" height="330" /></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-3 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-md">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-9-mini.jpg" alt="" width="420" height="690" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/upload/20240729/U8dtuinyWLDwNbJPVXHES69kOqM3rG.jpg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-9-mini.jpg" alt="" width="420" height="690" /></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-md-8 col-xl-6 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-xl thumbnail-custom-mobile-1">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-6-mini.jpg" alt="" width="870" height="330" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/upload/20240828/8wR1HosGgVLIKBA0qZvc7lj4YMTF6k.jpeg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-6-mini.jpg" alt="" width="870" height="330" /></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-3 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-md">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-11-mini.jpg" alt="" width="420" height="330" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/upload/20240828/QHxPKcbMZ5qLB3zd6I0ov7UW1fXaJm.jpeg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-11-mini.jpg" alt="" width="420" height="330" /></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-3 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-md">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-griliato-mini.jpg" alt="" width="420" height="330" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/images/gallery/primer-raboti-griliato.jpg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-griliato-mini.jpg" alt="" width="420" height="330" /></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-3 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-md">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-1-mini.jpg" alt="" width="420" height="330" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/images/gallery/primer-raboti-1.jpg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-1-mini.jpg" alt="" width="420" height="330" /></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-3 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-md">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-5-mini.jpg" alt="" width="420" height="330" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/images/gallery/primer-raboti-5.jpg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-5-mini.jpg" alt="" width="420" height="330" /></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-3 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-md">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-3-mini.jpg" alt="" width="420" height="330" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/upload/20240828/WfdpwCcKGtDOFZTjE8YlRahiLBnmg1.jpg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-3-mini.jpg" alt="" width="420" height="330" /></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-3 isotope-item" data-filter="Type 1">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail thumbnail-mary thumbnail-md">
+            <div class="thumbnail-mary-figure"><img src="/images/gallery/primer-raboti-2-mini.jpg" alt="" width="420" height="330" />
+            </div>
+            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60 thumbnail-mary-title" href="/images/gallery/primer-raboti-2.jpg" data-lightgallery="item"><img src="/images/gallery/primer-raboti-2-mini.jpg" alt="" width="420" height="330" /></a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="button-wrap">
+        <a class="button button-sm button-default-outline button-wapasha" href="/portfolio/">Перейти в портфолио</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-md bg-default text-center">
+    <div class="container">
+	<div class="contant-zapros">
+
+		<div class="contant-zapros-form">
+			<h3>Написать нам</h3>
+		
+			<!-- RD Mailform-->
+			<form class="rd-form rd-mailform rd-form-inline oh-desktop" data-form-output="form-output-global" data-form-type="contact" method="post" action="#" class="rd-mailform">
+				<div class="form-wrap">
+					<label for="contact-name-2" class="form-label">Имя</label>
+					<input id="contact-name-2" type="text" name="name" data-constraints="@Required" class="form-input">
+				</div>
+				<div class="form-wrap">
+					<label for="contact-phone-2" class="form-label">Телефон</label>
+					<input id="contact-phone-2" type="text" name="phone" data-constraints="@Required" class="form-input">
+				</div>
+				<button type="submit" class="button button-primary">Отправить</button>
+			</form>
+			<p class="acceptance">Оставляя заявку даете согласие на обработку <a href="https://carusflooring.ru/politique-de-confidentialite.html">персональных данных</a></p>
+			<!-- Елемент в который будет выводиться информация об ошибке-->
+			<div class="form-output-global">
+			</div>
+		</div>
+
+		<img src="/images/calcu/30-38-20/30-38-20 3.jpg" alt="">
+	</div>
+</div>  </section>
+   <!-- Page Footer-->
+ <footer class="section footer-classic">
+   <div class="container">
+     <div class="row row-30 justify-content-between">
+       <div class="col-md-12 col-lg-6 col-xl-6 wow fadeInRight">
+         <div class="box-footer">
+           <div class="footer-brand-wrap">
+             <div class="footer-brand"><a href="/"><img src="/images/logo-prostill-dark.svg" alt="Prostill — потолочные системы" width="165" height="60" /></a></div>
+             <p>Prostill — потолочные системы</p>
+           </div>
+
+           <div class="footer-menus">
+             <div class="footer-menu">
+  <h3>Продукция</h3>
+  <ul class="footer-list-category">
+    <li class="heading-10"><a href="/kuboobraznii-potolok/">Рейка</a></li>
+    <li class="heading-10"><a href="/potolochnye-paneli-hook-on-prostill/">Потолочные панели Hook-On</a></li>
+    <li class="heading-10"><a href="/fasadnaya-reyka/">Фасадная рейка</a></li>
+    <li class="heading-10"><a href="/transformer/">Потолки ТРАНСФОРМЕР</a></li>
+    <li class="heading-10"><a href="/decorative-steel-ceilings/">Потолки из нержавеющей стали</a></li>
+    <li class="heading-10"><a href="/individual-solutions/">Индивидуальные решения</a></li>
+  </ul>
+</div>
+              
+              <div class="footer-menu">
+                <h3>Информация</h3>
+                <ul class="footer-list-category">
+                  <li class="heading-10"><a href="/about/">О компании</a></li>
+                  <li class="heading-10"><a href="/color/">Цвета</a></li>
+                  <li class="heading-10"><a href="/calculator/">Калькулятор 3D</a></li>
+                  <li class="heading-10"><a href="/portfolio/">Портфолио</a></li>
+                 <li class="heading-10"><a href="/contacts/">Контакты</a></li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="col-md-12 col-lg-6 col-xl-6 wow fadeInRight" data-wow-delay=".1s">
+         <div class="contact-classic pro-footer-contact">
+  <div class="messenger-buttons">
+    <a class="messenger-button messenger-button--telegram" href="https://t.me/hodanetzky_stas" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.87 1.18-5.28 3.48-.5.35-.95.52-1.35.51-.44-.01-1.29-.26-1.92-.47-.77-.25-1.38-.39-1.33-.82.03-.22.33-.45.91-.68 3.55-1.55 5.92-2.57 7.11-3.07 3.38-1.42 4.08-1.66 4.54-1.67.1 0 .32.02.47.14.13.1.17.24.18.33.01.08.02.24.01.38z"/></svg><span>Telegram</span></a>
+    <a class="messenger-button messenger-button--max" href="https://max.ru/u/f9LHodD0cOInmBibV7SR25Dd6ebDkjSuRt7deD7Jef0h9Q-NWHyJ1ejGwlc" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><span>Написать в MAX</span></a>
+  </div>
+  <div class="contact-classic-item contact-classic-item-phones">
+    <a href="tel:+79202780201">+7 (920) 278-02-01</a>
+  </div>
+  <div class="contact-classic-item">
+    <p>г. Москва, Рязанский проспект, д. 3б, офис 409</p>
+  </div>
+</div>
+
+       </div>
+     </div>
+
+   </div>
+   <div class="container footer-bottom-panel wow fadeInUp">
+     <p class="rights">© ООО «ПРО Проекты» 2026 · ИНН 9721250620 · ОГРН 1257700195642<br>
+  <a href="https://carusflooring.ru/mentions-legales.html" target="_blank" rel="noopener noreferrer">Юридическая информация</a> |
+  <a href="https://carusflooring.ru/politique-de-confidentialite.html" target="_blank" rel="noopener noreferrer">Политика ПДн</a> |
+  <a href="https://carusflooring.ru/politika-cookies.html" target="_blank" rel="noopener noreferrer">Cookies</a> |
+  <a href="https://carusflooring.ru/soglasie-pd.html" target="_blank" rel="noopener noreferrer">Согласие на ПДн</a> |
+  <a href="https://carusflooring.ru/conditions-generales-ventes.html" target="_blank" rel="noopener noreferrer">Общие условия</a>
+</p>
+   </div>
+ </footer>
+  </div>
+  <!-- Global Mailform Output-->
+  <div class="snackbars" id="form-output-global"></div>
+  <!-- Javascript-->
+  <script src="/js/core.min.js"></script>
+  <script src="/js/script.js"></script>
+    <script src="/js/pages-preview.js"></script>
+</body>
+
+</html>
