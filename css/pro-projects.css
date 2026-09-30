@@ -411,22 +411,31 @@
 }
 
 .messenger-buttons {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 15px;
+  width: 100%;
   margin: 24px 0;
 }
 
 .messenger-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  box-sizing: border-box;
   padding: 13px 28px;
   border-radius: 14px;
   color: #fff !important;
   font-family: system-ui, sans-serif;
   font-size: 16px;
   font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
   text-decoration: none !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -688,9 +697,8 @@
     height: 310px;
   }
 
-  .messenger-button {
-    width: 100%;
-    justify-content: center;
+  .messenger-buttons {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .pro-callback-modal {
@@ -825,8 +833,7 @@ body, .bg-default { background-color: var(--prostill-alu); }
   }
 
   .pro-footer-contact .messenger-buttons {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
     gap: 12px;
   }
@@ -847,5 +854,11 @@ body, .bg-default { background-color: var(--prostill-alu); }
   .pro-footer-contact .contact-classic-item-phones a {
     font-size: clamp(21px, 5.5vw, 28px);
     white-space: nowrap;
+  }
+}
+
+@media (max-width: 575px) {
+  .pro-footer-contact .messenger-buttons {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
