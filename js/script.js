@@ -2448,17 +2448,23 @@ document.addEventListener("DOMContentLoaded", function () {
       var key = e.keyCode;
 
       if (key == 27) {
-        document.querySelector(".modal-okno.active").classList.remove("active");
-        document.querySelector(".overlay").classList.remove("active");
+        var activeModal = document.querySelector(".modal-okno.active");
+        var activeOverlay = document.querySelector(".overlay");
+
+        if (activeModal) activeModal.classList.remove("active");
+        if (activeOverlay) activeOverlay.classList.remove("active");
       }
     },
     false
   );
 
-  overlay.addEventListener("click", function () {
-    document.querySelector(".modal-okno.active").classList.remove("active");
-    this.classList.remove("active");
-  });
+  if (overlay) {
+    overlay.addEventListener("click", function () {
+      var activeModal = document.querySelector(".modal-okno.active");
+      if (activeModal) activeModal.classList.remove("active");
+      this.classList.remove("active");
+    });
+  }
 
   $(".rd-navbar-nav li:first-child a").on("click", function () {
     if ($(window).width() < 992) {

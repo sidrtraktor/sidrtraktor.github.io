@@ -1,8 +1,8 @@
 :root {
-  --pro-accent: #ff5c35;
-  --pro-dark: #111214;
+  --pro-accent: #E8561C;
+  --pro-dark: #17191C;
   --pro-muted: #6c7077;
-  --pro-surface: #f4f4f1;
+  --pro-surface: #EEF0F2;
   --pro-border: rgba(17, 18, 20, 0.14);
 }
 
@@ -442,13 +442,13 @@
 }
 
 .messenger-button--telegram {
-  background: #2481cc;
-  box-shadow: 0 4px 15px rgba(36, 129, 204, 0.3);
+  background: #17191C;
+  box-shadow: none;
 }
 
 .messenger-button--max {
-  background: linear-gradient(135deg, #00d4ff, #7b68ee, #8b00ff);
-  box-shadow: 0 4px 15px rgba(123, 104, 238, 0.3);
+  background: #17191C;
+  box-shadow: none;
 }
 
 .pro-contact-card {
@@ -696,5 +696,88 @@
   .pro-callback-modal {
     width: calc(100% - 24px);
     padding: 26px 20px;
+  }
+}
+
+/* ============================================================
+   PROSTILL — brand layer, Palette A: Graphite + Signal Orange.
+   Kept at the end of the file so it overrides the mirrored template.
+   ============================================================ */
+@font-face { font-family: "Unbounded"; src: url("/fonts/Unbounded-Variable.woff2") format("woff2"); font-weight: 400 900; font-display: swap; }
+@font-face { font-family: "Manrope"; src: url("/fonts/Manrope-Variable.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
+
+:root {
+  --prostill-graphite: #17191C;
+  --prostill-steel: #3A3F45;
+  --prostill-accent: #E8561C;
+  --prostill-accent-hover: #C9460F;
+  --prostill-accent-text: #B8410E;
+  --prostill-accent-tint: #FFD8C4;
+  --prostill-alu: #EEF0F2;
+  --prostill-paper: #FFFFFF;
+  --prostill-muted: #62686F;
+  --prostill-line: #D5D9DD;
+  --accent-hover: var(--prostill-accent-hover);
+  --accent-color: var(--prostill-accent);
+  --accent-color-2: var(--prostill-accent);
+  --base-text: var(--prostill-graphite);
+  --font-title: "Unbounded", Arial, sans-serif;
+  --pro-accent: var(--prostill-accent);
+  --pro-dark: var(--prostill-graphite);
+  --pro-surface: var(--prostill-paper);
+  --pro-muted: var(--prostill-muted);
+  --pro-border: rgba(23, 25, 28, .14);
+}
+
+body { font-family: "Manrope", Arial, sans-serif; }
+h1, h2, .text-home-h1, .pro-page-hero h1, .pro-section h2 { font-family: "Unbounded", Arial, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+
+body, .bg-default { background-color: var(--prostill-alu); }
+.pro-section--soft { background: var(--prostill-paper); }
+.contact-classic-city { background: var(--prostill-alu); }
+
+.bg-dark { background-color: var(--prostill-graphite); }
+.box-dark1 { background: rgba(23, 25, 28, .62); }
+.home-slider { background-color: var(--prostill-graphite); }
+.rd-navbar-classic.rd-navbar-static.rd-navbar--is-stuck,
+.rd-navbar-classic.rd-navbar-static.rd-navbar--is-clone { background: var(--prostill-graphite) !important; }
+.contant-zapros { background: var(--prostill-graphite); }
+.pro-contact-hero { background-image: linear-gradient(135deg, var(--prostill-graphite), var(--prostill-steel)); }
+
+.button-primary, .button-primary:focus { background-color: var(--prostill-accent); border-color: var(--prostill-accent); color: #fff; font-weight: 700; }
+.button-primary:hover, .button-primary:active { background-color: var(--prostill-accent-hover); border-color: var(--prostill-accent-hover); color: #fff; }
+
+.bg-default a:hover, .pro-section--soft a:hover { color: var(--prostill-accent-text); }
+.page-item.active .page-link,
+.page-link:focus,
+.page-link:hover { color: var(--prostill-accent-text); }
+
+.messenger-button--telegram, .messenger-button--max { background: var(--prostill-graphite); box-shadow: none; }
+.messenger-button--telegram:hover, .messenger-button--max:hover { background: var(--prostill-accent); }
+
+.footer-classic { background: var(--prostill-graphite); color: rgba(255,255,255,.72); }
+.footer-classic h3, .footer-classic a, .footer-classic .contact-classic-item a { color: #fff; }
+.footer-classic a:hover { color: var(--prostill-accent); }
+.footer-classic .pro-footer-contact { background: var(--prostill-steel); }
+.footer-classic .rights, .footer-classic .rights a { color: rgba(255,255,255,.55); }
+
+@media (min-width: 992px) { .pro-mobile-contacts { display: none; } }
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-brand img,
+.rd-navbar-fixed .rd-navbar-brand img { width: auto; height: 44px; max-width: none; max-height: none; }
+.footer-brand a, .footer-brand img { width: auto; }
+.footer-brand img { height: 52px; }
+
+@media (max-width: 991px) {
+  .rd-navbar-fixed .rd-navbar-brand img {
+    width: auto;
+    height: 30px;
+    max-width: 148px;
+  }
+
+  .pro-page-hero h1 {
+    font-size: clamp(27px, 7vw, 32px);
+    overflow-wrap: normal;
+    word-break: normal;
   }
 }
