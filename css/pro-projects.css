@@ -755,11 +755,50 @@ body, .bg-default { background-color: var(--prostill-alu); }
 .messenger-button--telegram, .messenger-button--max { background: var(--prostill-graphite); box-shadow: none; }
 .messenger-button--telegram:hover, .messenger-button--max:hover { background: var(--prostill-accent); }
 
+.header-contact-stack {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pro-catalog-link {
+  color: var(--prostill-accent) !important;
+  font-family: "Manrope", Arial, sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+
+.pro-header-catalog-link {
+  margin-top: 8px;
+  font-size: 15px;
+  letter-spacing: .04em;
+}
+
+.pro-header-catalog-link:hover,
+.pro-mobile-catalog-link:hover {
+  color: var(--prostill-accent-hover) !important;
+  opacity: 1 !important;
+}
+
+.pro-mobile-catalog-link {
+  width: 100%;
+  margin: -2px 0 8px;
+  font-size: 17px !important;
+  text-align: center !important;
+}
+
 .footer-classic { background: var(--prostill-graphite); color: rgba(255,255,255,.72); }
 .footer-classic h3, .footer-classic a, .footer-classic .contact-classic-item a { color: #fff; }
 .footer-classic a:hover { color: var(--prostill-accent); }
 .footer-classic .pro-footer-contact { background: var(--prostill-steel); }
 .footer-classic .rights, .footer-classic .rights a { color: rgba(255,255,255,.55); }
+.pro-footer-contact { min-width: 0; overflow: hidden; }
+.pro-footer-contact .messenger-buttons,
+.pro-footer-contact .contact-classic-item { min-width: 0; }
+.pro-footer-contact .contact-classic-item a,
+.pro-footer-contact .contact-classic-item p { overflow-wrap: anywhere; }
 
 @media (min-width: 992px) { .pro-mobile-contacts { display: none; } }
 
@@ -779,5 +818,34 @@ body, .bg-default { background-color: var(--prostill-alu); }
     font-size: clamp(27px, 7vw, 32px);
     overflow-wrap: normal;
     word-break: normal;
+  }
+
+  .pro-footer-contact {
+    padding: clamp(20px, 5vw, 30px);
+  }
+
+  .pro-footer-contact .messenger-buttons {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    gap: 12px;
+  }
+
+  .pro-footer-contact .messenger-button {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .pro-footer-contact .contact-classic-item a,
+  .pro-footer-contact .contact-classic-item p {
+    font-size: clamp(16px, 3.8vw, 20px);
+  }
+
+  .pro-footer-contact .contact-classic-item-phones a {
+    font-size: clamp(21px, 5.5vw, 28px);
+    white-space: nowrap;
   }
 }
