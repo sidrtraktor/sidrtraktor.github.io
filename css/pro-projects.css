@@ -810,6 +810,25 @@ body, .bg-default { background-color: var(--prostill-alu); }
 
 @media (min-width: 992px) { .pro-mobile-contacts { display: none; } }
 
+/* The rebranded desktop submenu contains longer Russian product names than
+   the original 165 px menu. Give them a readable column and allow wrapping
+   without letting a single word escape the panel. */
+.rd-navbar-static .rd-navbar-dropdown {
+  width: 280px;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+}
+
+.rd-navbar-static .rd-navbar-dropdown > li > a {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.45;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
 .rd-navbar-classic.rd-navbar-static .rd-navbar-brand img,
 .rd-navbar-fixed .rd-navbar-brand img { width: auto; height: 44px; max-width: none; max-height: none; }
 .footer-brand a, .footer-brand img { width: auto; }
