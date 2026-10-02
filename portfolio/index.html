@@ -601,6 +601,21 @@
   </article>
     </div>
   </div></section>
+  <script data-pro-portfolio-anchor>
+    (function () {
+      var initialHash = window.location.hash;
+      if (initialHash !== "#portfolio-videos" && initialHash !== "#portfolio-photos") return;
+      window.addEventListener("load", function () {
+        // Isotope rearranges the preceding photos during the window load event.
+        window.requestAnimationFrame(function () {
+          window.requestAnimationFrame(function () {
+            var target = document.getElementById(initialHash.slice(1));
+            if (target && window.location.hash === initialHash) target.scrollIntoView({ block: "start" });
+          });
+        });
+      }, { once: true });
+    }());
+  </script>
   <!-- PRO PORTFOLIO VIDEOS END -->
 
 <!-- Page Footer-->
