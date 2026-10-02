@@ -748,6 +748,8 @@ h1, h2, .text-home-h1, .pro-page-hero h1, .pro-section h2 { font-family: "Unboun
   font-weight: 800;
   letter-spacing: .055em;
   line-height: 1.05;
+  -webkit-text-stroke: clamp(2px, .28vw, 4px) #f04438;
+  paint-order: stroke fill;
 }
 
 .text-home-h1 .pro-home-tagline { display: block; }
