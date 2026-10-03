@@ -741,15 +741,33 @@ body { font-family: "Manrope", Arial, sans-serif; }
 h1, h2, .text-home-h1, .pro-page-hero h1, .pro-section h2 { font-family: "Unbounded", Arial, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
 
 .text-home-h1 .pro-home-brand {
+  position: relative;
+  isolation: isolate;
   display: block;
   margin-bottom: .14em;
-  font-family: "Manrope", Arial, sans-serif;
-  font-size: clamp(44px, 7.5vw, 100px);
-  font-weight: 800;
-  letter-spacing: .055em;
-  line-height: 1.05;
-  -webkit-text-stroke: clamp(2px, .28vw, 4px) #f04438;
-  paint-order: stroke fill;
+  font-family: "Unbounded", Arial, sans-serif;
+  font-size: clamp(36px, 7.5vw, 100px);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.14;
+  color: #fff;
+}
+
+.text-home-h1 .pro-home-brand__outline {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: clamp(3px, .5vw, 7px) transparent;
+  background-image: linear-gradient(145deg, #f2c2b7 8%, #e3a49b 36%, #b97776 68%, #ecc0b5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .2));
+}
+
+@media (max-width: 575px) {
+  .text-home-h1 .pro-home-brand { font-size: clamp(34px, 10.5vw, 44px); }
 }
 
 .text-home-h1 .pro-home-tagline { display: block; }
