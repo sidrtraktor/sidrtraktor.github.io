@@ -134,8 +134,21 @@ function textCalculation() {
 }
 document.getElementById('copy-calculation').addEventListener('click', async () => {
   if (!current) return;
-  try { await navigator.clipboard.writeText(textCalculation()); actionStatus.textContent = 'Расчёт скопирован.'; }
-  catch { actionStatus.textContent = 'Браузер не разрешил копирование. Используйте CSV или печать.'; }
+  const text = textCalculation();
+  try {
+    if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(text);
+    else {
+      // The IP-based HTTP preview is not a secure Clipboard API origin.
+      // Use a user-initiated legacy copy, with an explicit failure message.
+      const area = document.createElement('textarea'); area.value = text;
+      area.style.cssText = 'position:fixed;left:-9999px;top:0';
+      area.setAttribute('readonly', ''); document.body.append(area); area.select();
+      let copied;
+      try { copied = document.execCommand('copy'); } finally { area.remove(); }
+      if (!copied) throw new Error('Clipboard copy rejected');
+    }
+    actionStatus.textContent = 'Расчёт скопирован.';
+  } catch { actionStatus.textContent = 'Браузер не разрешил копирование. Используйте CSV или печать.'; }
 });
 document.getElementById('print-calculation').addEventListener('click', () => { if (current) window.print(); });
 document.getElementById('export-csv').addEventListener('click', () => {
