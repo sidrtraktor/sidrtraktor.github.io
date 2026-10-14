@@ -7,10 +7,12 @@ const resultRoot = document.getElementById('material-results');
 const actionStatus = document.getElementById('action-status');
 const actionButtons = [...document.querySelectorAll('.calc-actions button')];
 const format = (n, digits = 2) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: digits }).format(n);
-const storageKey = 'prostill.ceilingCalculator.v2';
+// Do not interpret old saved metre values as millimetres.
+const storageKey = 'prostill.ceilingCalculator.v3';
 let current = null;
 let preview = null;
 let previewTimer;
+let pdfBusy = false;
 
 function setView(next) {
   for (const view of ['3d', 'plan']) {
@@ -33,10 +35,23 @@ function roomMode() {
   document.getElementById('dimension-fields').hidden = areaMode;
   document.getElementById('area-fields').hidden = !areaMode;
   for (const name of ['length', 'width']) form.elements.namedItem(name).disabled = areaMode;
-  for (const name of ['area', 'ratio']) form.elements.namedItem(name).disabled = !areaMode;
+  form.elements.namedItem('area').disabled = !areaMode;
   document.getElementById('room-note').textContent = areaMode
-    ? 'Размеры и периметр оценочные. При соотношении 1 принимается квадратное помещение; для точного периметра выберите «По размерам».'
-    : 'Для точного периметра задайте длину и ширину.';
+    ? 'Предварительный расход по площади. 3D и схема — условный пример. Размеры и шаги — мм; площадь — м²; расход — пог.м.'
+    : 'Раскладка по реальным размерам. Все размеры и шаги — мм; площадь — м²; расход — пог.м.';
+  connectorFields();
+}
+function connectorFields() {
+  const project = form.elements.namedItem('connectorMode').value === 'project';
+  const needsRun = !project && form.elements.namedItem('mode').value === 'area';
+  document.getElementById('connector-run-fields').hidden = !needsRun;
+  document.getElementById('connector-quantity-fields').hidden = !project;
+  form.elements.namedItem('connectorRun').disabled = !needsRun;
+  form.elements.namedItem('connectorQuantity').disabled = !project;
+  document.getElementById('connector-note').textContent = project
+    ? 'Укажите итоговое количество из проекта, уже с запасом. Повторно запас не добавляется.'
+    : needsRun ? 'Без длины линии количество не определяется. Можно оставить поле пустым и уточнить соединители по проекту.'
+    : 'Один соединитель на стык двух заготовок. Тип и допустимость соединения уточняются по проекту.';
 }
 function readForm() { return Object.fromEntries(new FormData(form)); }
 function save() { try { localStorage.setItem(storageKey, JSON.stringify(readForm())); } catch { /* Calculation does not require storage. */ } }
@@ -55,30 +70,38 @@ function syncRanges() {
   }
 }
 function linearCard(title, v) {
-  return `<article class="calc-material"><h3>${title}</h3><div class="calc-quantity">${format(v.netLength)} <small>пог.м</small></div><p>С запасом: ${format(v.orderLength)} пог.м</p><div class="calc-order">К закупке: ${format(v.orderPieces, 0)} шт. × ${format(v.stockLength)} м<br>${format(v.purchasedLength)} пог.м в заготовках</div></article>`;
+  return `<article class="calc-material"><h3>${title}</h3><p>К заказу</p><div class="calc-quantity">${format(v.orderPieces, 0)} <small>шт. × ${format(v.stockMm, 0)} мм</small></div><div class="calc-order">${format(v.purchasedLength)} пог.м в заготовках</div><p>Чистый расход: ${format(v.netLength)} пог.м<br>Расход с запасом: ${format(v.orderLength)} пог.м</p></article>`;
 }
 function pieceCard(title, v) {
-  return `<article class="calc-material"><h3>${title}</h3><div class="calc-quantity">${format(v.netPieces, 0)} <small>шт.</small></div><p>По предварительной схеме</p><div class="calc-order">С запасом: ${format(v.orderPieces, 0)} шт.</div></article>`;
+  if (v.pending) return `<article class="calc-material"><h3>${title}</h3><div class="calc-quantity">Уточнить</div><p>Нужны длины линий рейки или количество из проекта.</p></article>`;
+  const project = v.basis === 'project';
+  const note = project ? 'Количество по проекту, запас включён' : v.basis === 'blanks' ? 'По заготовкам гребёнки' : v.estimated ? 'Оценка по длине линии' : 'По предварительной раскладке';
+  return `<article class="calc-material"><h3>${title}</h3><p>К заказу${project ? ' · по проекту' : ' · с запасом'}</p><div class="calc-quantity">${format(v.orderPieces, 0)} <small>шт.</small></div><div class="calc-order">${note}</div>${project ? '' : `<p>Без запаса: ${format(v.netPieces, 0)} шт.</p>`}</article>`;
 }
 function showResult(r) {
   const { geometry: g, layout: l, materials: m, input: i } = r;
-  document.querySelector('#mobile-summary span').textContent = `${format(g.area)} м² · Рейка ${format(m.slats.netLength)} пог.м`;
+  document.querySelector('#mobile-summary span').textContent = `${format(g.area)} м² · К заказу ${format(m.slats.purchasedLength)} пог.м`;
   document.getElementById('geometry-summary').innerHTML = [
-    ['Площадь', `${format(g.area)} м²`], [g.estimated ? 'Периметр ≈' : 'Периметр', `${format(g.perimeter)} м`],
-    ['Шаг по осям', `${format(l.pitchMm)} мм`], ['Рядов реек', format(l.slatRows, 0)],
+    ['Площадь', `${format(g.area)} м²`], ['Шаг по осям', `${format(l.pitchMm)} мм`],
+    ['Рейка', `${format(i.slatStock, 0)} мм`], [g.estimated ? 'Метод' : 'Рядов реек', g.estimated ? 'По площади' : format(l.slatRows, 0)],
   ].map(([name, value]) => `<div><small>${name}</small><strong>${value}</strong></div>`).join('');
   document.getElementById('reserve-label').textContent = `Запас ${format(i.reserve)}%`;
   resultRoot.innerHTML = linearCard('Рейка', m.slats) + linearCard('Несущая гребёнка', m.stringers)
-    + linearCard('Пристенный уголок', m.wallAngle) + pieceCard('Подвесы', m.hangers) + pieceCard('Крепёж уголка · оценка', m.wallFixings);
-  document.getElementById('consumption-note').textContent = `Теоретический расход рейки: 1000 / ${format(l.pitchMm)} = ${format(r.coefficients.slatsPerSquareMeter, 3)} пог.м/м². Ведомость учитывает целые ряды. ${g.estimated ? `Оценочное помещение: ${format(g.length)} × ${format(g.width)} м.` : ''}`;
+    + pieceCard('Подвесы', m.hangers) + pieceCard('Соединители рейки', m.connectors);
+  document.getElementById('consumption-note').textContent = `Расход рейки: 1000 / ${format(l.pitchMm)} = ${format(r.coefficients.slatsPerSquareMeter, 3)} пог.м/м². ${g.estimated ? 'Расчёт по площади: метраж → целые заготовки → запас → округление вверх.' : 'Раскладка по размерам: целые ряды; заготовки на каждый ряд без повторного использования обрезков.'}`;
+  const railMethod = g.estimated
+    ? `Рейка: ${format(g.area)} м² × ${format(r.coefficients.slatsPerSquareMeter, 3)} пог.м/м² = ${format(m.slats.netLength)} пог.м. Гребёнка: ${format(g.area)} × 1000 / ${format(i.stringerSpacing, 0)} = ${format(m.stringers.netLength)} пог.м.`
+    : `Рейка: ${l.slatRows} рядов × ${format(g.run * 1000, 0)} мм = ${format(m.slats.netLength)} пог.м. Гребёнки: ${l.stringerRows} линий × ${format(g.cross * 1000, 0)} мм; фактический шаг ≈ ${format(l.actualStringerSpacing, 0)} мм.`;
+  const hangerMethod = g.estimated
+    ? `Подвесы: ${m.hangers.perBlank} шт. на заготовку гребёнки ${format(i.stringerStock, 0)} мм при шаге до ${format(i.hangerSpacing, 0)} мм. К закупке ${m.stringers.orderPieces} заготовок × ${m.hangers.perBlank} = ${m.hangers.orderPieces} подвесов. Запас гребёнок уже учтён, повторного запаса нет.`
+    : `Подвесы: ${l.stringerRows} линий × ${l.hangersPerStringer} шт. = ${m.hangers.netPieces} шт. Фактический шаг ≈ ${format(l.actualHangerSpacing, 0)} мм, крайний отступ — половина шага; запас добавляется отдельно.`;
+  const connectorMethod = m.connectors.pending ? 'Соединители: количество не определяется по одной площади. Укажите длину линии или количество по проекту.'
+    : m.connectors.basis === 'project' ? `Соединители: ${m.connectors.orderPieces} шт. по проекту, уже с запасом.`
+    : `Соединители: ${m.connectors.rows} линий × ${m.connectors.jointsPerRow} стыков = ${m.connectors.netPieces} шт. без запаса. Один соединитель на стык; ${m.connectors.estimated ? 'линии оценочные, ' : ''}тип соединения согласуется по проекту.`;
   document.getElementById('calculation-method').innerHTML = `<ul>
-    <li>Рейка: ${l.slatRows} рядов × ${format(g.run)} м = ${format(m.slats.netLength)} пог.м. Зазор ${format(i.gap)} мм, ширина ${format(i.slatWidth)} мм. Ряды центрируются, отступ от стен ≈ ${format(l.edgeMargin * 1000)} мм.</li>
-    <li>Гребёнки: ${l.stringerRows} линий × ${format(g.cross)} м. Линии распределены равномерно, их не менее двух. Фактический шаг ≈ ${format(l.actualStringerSpacing)} м, отступ от края — половина шага.</li>
-    <li>Подвесы: ${l.stringerRows} линий × ${l.hangersPerStringer} шт. = ${m.hangers.netPieces} шт. Фактический шаг ≈ ${format(l.actualHangerSpacing, 3)} м (не больше заданных ${format(i.hangerSpacing)} м), крайний отступ — половина шага.</li>
-    <li>Уголок: 2 × (${format(g.length)} + ${format(g.width)}) = ${format(g.perimeter)} пог.м. Крепёж оценивается отдельно по каждой стене с точками у концов.</li>
-    <li>Запас ${format(i.reserve)}% прибавляется к метражу и заготовкам. Штучные позиции округляются вверх. Обрезки не используются повторно: для каждого ряда и каждой стены считаются собственные заготовки.</li>
-    <li>Если пролёт длиннее заготовки, предполагаются стыки. Их допустимость и дополнительные соединители нужно согласовать; соединители не учтены.</li>
-    ${g.estimated ? '<li>Площадь задаёт оценочный прямоугольник. Одинаковая площадь не определяет реальный периметр.</li>' : ''}
+    <li>${railMethod}</li><li>${hangerMethod}</li><li>${connectorMethod}</li>
+    <li>Запас ${format(i.reserve)}% применяется к чистому метражу и к количеству целых заготовок. Сначала округляется количество заготовок без запаса, затем добавляется запас и снова округляется вверх. Поэтому закупочный метраж больше чистого расхода.</li>
+    <li>${g.estimated ? 'Расход по площади — предварительная закупочная оценка; нужен монтажный проект и схема раскроя. Размеры условного квадрата в 3D не участвуют в расчёте расхода.' : 'Для каждого ряда считаются собственные заготовки, без повторного использования обрезков; схема раскроя может уменьшить расход.'} Соединители не добавляются к стоимости: цен в калькуляторе нет.</li>
   </ul>`;
   renderPlan(document.getElementById('ceiling-plan'), r);
   clearTimeout(previewTimer);
@@ -86,7 +109,7 @@ function showResult(r) {
     if (!preview) preview = createPreview(document.getElementById('renderCanvas'), document.getElementById('preview-status'));
     if (preview) {
       preview.update(r);
-      document.getElementById('preview-note').textContent = `Вращение — перетаскиванием, масштаб — колёсиком или двумя пальцами. ${g.length > 8 || g.width > 8 ? '3D показывает фрагмент до 8 × 8 м; ведомость рассчитана на всё помещение. ' : ''}Схема не является монтажным чертежом.`;
+      document.getElementById('preview-note').textContent = `Вращение — перетаскиванием, масштаб — колёсиком или двумя пальцами. ${g.estimated ? 'Условный пример: не реальная форма помещения. ' : ''}${g.length > 8 || g.width > 8 ? 'Показан фрагмент до 8000 × 8000 мм; расход — на всё помещение. ' : ''}Не монтажный чертёж.`;
     } else {
       setView('plan'); document.getElementById('preview-note').textContent = '3D недоступен. Расчёт и схема работают без WebGL.';
       document.getElementById('tab-3d').disabled = true;
@@ -98,7 +121,7 @@ function update() {
   actionStatus.textContent = '';
   try {
     current = calculateCeiling(readForm()); error.hidden = true;
-    actionButtons.forEach(b => b.disabled = false); showResult(current); save();
+    actionButtons.forEach(b => b.disabled = pdfBusy && b.id === 'export-pdf'); showResult(current); save();
   } catch (e) {
     current = null; clearTimeout(previewTimer); error.hidden = false; error.textContent = e.message;
     document.querySelector('#mobile-summary span').textContent = 'Проверьте параметры';
@@ -115,6 +138,7 @@ form.addEventListener('input', e => {
     if (e.target.value === 'area' && current) form.elements.namedItem('area').value = current.geometry.area;
     roomMode();
   }
+  if (e.target.name === 'connectorMode') connectorFields();
   syncRanges(); update();
 });
 document.getElementById('reset-calculator').addEventListener('click', () => { form.reset(); roomMode(); syncRanges(); update(); preview?.reset(); });
@@ -123,14 +147,14 @@ function textCalculation() {
   if (!current) return '';
   const { geometry: g, layout: l, input: i, materials: m } = current;
   return ['PROSTILL · предварительная ведомость реечного потолка',
-    `Помещение: ${format(g.length)} × ${format(g.width)} м; площадь ${format(g.area)} м²; периметр ${format(g.perimeter)} м${g.estimated ? ' (оценочно)' : ''}.`,
+    `${g.estimated ? 'Расчёт по площади' : `Помещение ${format(i.length)} × ${format(i.width)} мм`}; площадь ${format(g.area)} м².`,
     `Рейка ${format(i.slatWidth)} × ${format(i.slatHeight)} мм; зазор ${format(i.gap)} мм; шаг ${format(l.pitchMm)} мм.`,
     `Направление: вдоль ${i.orientation === 'length' ? 'длины' : 'ширины'}. Запас ${format(i.reserve)}%.`,
-    ...[['Рейка', m.slats], ['Гребёнка', m.stringers], ['Пристенный уголок', m.wallAngle]].map(([name, v]) => `${name}: ${format(v.netLength)} пог.м; с запасом ${format(v.orderLength)} пог.м; к закупке ${v.orderPieces} шт. × ${v.stockLength} м.`),
-    `Подвесы: ${m.hangers.netPieces} шт.; с запасом ${m.hangers.orderPieces} шт.; шаг до ${format(i.hangerSpacing)} м вдоль гребёнки.`,
-    `Крепёж уголка (оценка): ${m.wallFixings.netPieces} шт.; с запасом ${m.wallFixings.orderPieces} шт.`,
-    'Обрезки не используются повторно. Соединители не учтены. Шаги и стыки согласуются по проекту.',
-    'Не монтажный проект. info@prostill.ru · +7 (920) 278-02-01'].join('\n');
+    ...[['Рейка', m.slats], ['Гребёнка', m.stringers]].map(([name, v]) => `${name}: ${format(v.netLength)} пог.м; с запасом ${format(v.orderLength)} пог.м; к закупке ${v.orderPieces} шт. × ${format(v.stockMm, 0)} мм (${format(v.purchasedLength)} пог.м).`),
+    `Шаг гребёнок ${format(i.stringerSpacing, 0)} мм; подвесов ${format(i.hangerSpacing, 0)} мм. Подвесы к заказу: ${m.hangers.orderPieces} шт.`,
+    `Соединители: ${m.connectors.pending ? 'уточнить по проекту' : `${m.connectors.orderPieces} шт., ${m.connectors.basis === 'project' ? 'по проекту, запас включён' : 'по стыкам, с запасом'}`}.`,
+    g.estimated ? 'Предварительный расход по площади; нужна схема раскроя.' : 'Без повторного использования обрезков. Нужна схема раскроя.',
+    'Не монтажный проект. prostill.ru · info@prostill.ru · +7 (920) 278-02-01'].join('\n');
 }
 document.getElementById('copy-calculation').addEventListener('click', async () => {
   if (!current) return;
@@ -148,28 +172,22 @@ document.getElementById('copy-calculation').addEventListener('click', async () =
       if (!copied) throw new Error('Clipboard copy rejected');
     }
     actionStatus.textContent = 'Расчёт скопирован.';
-  } catch { actionStatus.textContent = 'Браузер не разрешил копирование. Используйте CSV или печать.'; }
+  } catch { actionStatus.textContent = 'Браузер не разрешил копирование. Сохраните PDF или используйте печать.'; }
 });
 document.getElementById('print-calculation').addEventListener('click', () => { if (current) window.print(); });
-document.getElementById('export-csv').addEventListener('click', () => {
-  if (!current) return;
-  const { geometry: g, materials: m, input: i, layout: l } = current;
-  const rows = [['PROSTILL', 'Предварительная ведомость, не монтажный проект'],
-    ['Помещение, м', `${format(g.length)} × ${format(g.width)}`], ['Площадь, м²', format(g.area)],
-    [g.estimated ? 'Периметр (оценочно), м' : 'Периметр, м', format(g.perimeter)],
-    ['Ширина / высота рейки, мм', `${i.slatWidth} / ${i.slatHeight}`], ['Зазор, мм', i.gap], ['Шаг по осям, мм', l.pitchMm],
-    ['Направление', i.orientation === 'length' ? 'Вдоль длины' : 'Вдоль ширины'], ['Запас, %', i.reserve],
-    ['Шаг гребёнок / подвесов / крепежа уголка, м', `${i.stringerSpacing} / ${i.hangerSpacing} / ${i.fixingSpacing}`],
-    [], ['Материал', 'Чистый метраж, пог.м', 'Метраж с запасом, пог.м', 'К закупке, шт.', 'Длина заготовки, м', 'Закупочный метраж, пог.м'],
-    ...[['Рейка', m.slats], ['Гребёнка', m.stringers], ['Уголок', m.wallAngle]].map(([name, v]) => [name, format(v.netLength), format(v.orderLength), v.orderPieces, v.stockLength, format(v.purchasedLength)]),
-    [], ['Материал', 'Без запаса, шт.', 'С запасом, шт.'], ['Подвесы', m.hangers.netPieces, m.hangers.orderPieces], ['Крепёж уголка (оценка)', m.wallFixings.netPieces, m.wallFixings.orderPieces],
-    [], ['Допущения', 'Прямоугольное помещение; равномерные отступы; обрезки не используются повторно; соединители не учтены; допустимость шага и стыковки согласуется по проекту.'],
-    ['Контакты', 'info@prostill.ru · +7 (920) 278-02-01']];
-  const quote = v => `"${String(v ?? '').replaceAll('"', '""')}"`;
-  const csv = '\uFEFF' + rows.map(row => row.map(quote).join(';')).join('\r\n');
-  const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
-  const link = document.createElement('a'); link.href = url; link.download = 'prostill-ceiling-calculation.csv';
-  document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
-  actionStatus.textContent = 'CSV сохранён. В файле указаны параметры и допущения.';
+document.getElementById('export-pdf').addEventListener('click', async () => {
+  if (!current || pdfBusy) return;
+  const snapshot = current, button = document.getElementById('export-pdf');
+  pdfBusy = true; button.disabled = true; button.textContent = 'Готовим PDF…';
+  actionStatus.textContent = 'Загружаем шрифт и создаём брендированную ведомость.';
+  try {
+    const { downloadCalculationPdf } = await import(`./pdf.js${version}`);
+    await downloadCalculationPdf(snapshot);
+    actionStatus.textContent = 'PDF сохранён. В нём логотип, параметры, допущения и контакты Prostill.';
+  } catch {
+    actionStatus.textContent = 'Не удалось сохранить PDF. Проверьте соединение и повторите или используйте печать.';
+  } finally {
+    pdfBusy = false; button.disabled = !current; button.textContent = 'Сохранить PDF';
+  }
 });
 restore(); roomMode(); syncRanges(); update();

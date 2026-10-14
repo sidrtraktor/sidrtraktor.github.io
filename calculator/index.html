@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru" data-prostill-calculator="2">
+<html lang="ru" data-prostill-calculator="3">
 <head>
 <script data-local-http-redirect>
   (function () {
@@ -17,12 +17,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Калькулятор реечного потолка Prostill</title>
-  <meta name="description" content="Предварительный расчёт реечного потолка: рейка, несущая гребёнка, пристенный уголок, подвесы и крепёж. 3D-просмотр и схема раскладки.">
+  <meta name="description" content="Расчёт реечного потолка: рейка, гребёнка, подвесы и соединители. Размеры в миллиметрах, 3D и брендированная ведомость PDF Prostill.">
   <meta name="theme-color" content="#17191c">
   <link rel="icon" href="/images/favicon-prostill.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/calculator/calculator.css?v=0cface5f1ec3">
+  <link rel="stylesheet" href="/calculator/calculator.css?v=59316075e376">
   <script defer src="/calculator/babylon.js"></script>
-  <script type="module" src="/calculator/app.js?v=0cface5f1ec3"></script>
+  <script type="module" src="/calculator/app.js?v=59316075e376"></script>
     <meta name="prostill-site-mode" content="preview">
   </head>
 <body>
@@ -39,9 +39,9 @@
           <div class="calc-switch" role="group" aria-label="Способ задания помещения">
             <label><input type="radio" name="mode" value="dimensions" checked><span>По размерам</span></label><label><input type="radio" name="mode" value="area"><span>По площади</span></label>
           </div>
-          <div class="calc-fields" id="dimension-fields"><label>Длина, м<input id="length" name="length" inputmode="decimal" value="5"></label><label>Ширина, м<input id="width" name="width" inputmode="decimal" value="4"></label></div>
-          <div class="calc-fields" id="area-fields" hidden><label>Площадь, м²<input id="area" name="area" inputmode="decimal" value="20" disabled></label><label>Длина / ширина<input id="ratio" name="ratio" inputmode="decimal" value="1" disabled></label></div>
-          <p id="room-note" class="calc-help">Для точного периметра задайте длину и ширину.</p>
+          <div class="calc-fields" id="dimension-fields"><label>Длина, мм<input id="length" name="length" inputmode="decimal" value="5000"></label><label>Ширина, мм<input id="width" name="width" inputmode="decimal" value="4000"></label></div>
+          <div id="area-fields" hidden><label>Площадь, м²<input id="area" name="area" inputmode="decimal" value="20" disabled></label></div>
+          <p id="room-note" class="calc-help">Все размеры и шаги — в мм. Площадь — в м², расход материалов — в пог.м.</p>
         </fieldset>
         <fieldset><legend>02 <span>Рейка и раскладка</span></legend>
           <div class="calc-control"><label for="slatWidth">Ширина рейки, мм</label><div><input type="range" min="20" max="200" step="1" value="50" data-range="slatWidth" aria-label="Ползунок ширины рейки"><input id="slatWidth" name="slatWidth" inputmode="decimal" value="50"></div></div>
@@ -52,10 +52,16 @@
           <label class="calc-select">Отделка в 3D<select id="color" name="color"><option value="9006">RAL 9006 · серебристый</option><option value="9003">RAL 9003 · белый</option><option value="9005">RAL 9005 · чёрный</option><option value="7016">RAL 7016 · графит</option><option value="1015">RAL 1015 · слоновая кость</option><option value="2004">RAL 2004 · оранжевый</option><option value="wood">Под дерево · пример текстуры</option></select></label>
         </fieldset>
         <fieldset><legend>03 <span>Монтажные допущения</span></legend>
-          <div class="calc-fields"><label>Шаг гребёнок, м<input id="stringerSpacing" name="stringerSpacing" inputmode="decimal" value="1"></label><label>Шаг подвесов, м<input id="hangerSpacing" name="hangerSpacing" inputmode="decimal" value="0,6"></label></div>
-          <div class="calc-fields"><label>Крепёж уголка, м<input id="fixingSpacing" name="fixingSpacing" inputmode="decimal" value="0,5"></label><label>Запас, %<input id="reserve" name="reserve" inputmode="decimal" value="5"></label></div>
+          <div class="calc-fields"><label>Шаг гребёнок, мм<input id="stringerSpacing" name="stringerSpacing" inputmode="decimal" value="1000"></label><label>Шаг подвесов, мм<input id="hangerSpacing" name="hangerSpacing" inputmode="decimal" value="600"></label></div>
+          <label>Запас, %<input id="reserve" name="reserve" inputmode="decimal" value="5"></label>
           <p class="calc-help">Подвесы считаются вдоль каждой гребёнки. Значения шага — исходные допущения; согласуйте их с проектировщиком и производителем.</p>
-          <details class="calc-stock"><summary>Длины заготовок</summary><div class="calc-stock-fields"><label>Рейка, м<select name="slatStock" id="slatStock"><option>2</option><option>3</option><option>4</option><option selected>6</option></select></label><label>Гребёнка, м<select name="stringerStock" id="stringerStock"><option>2</option><option selected>3</option><option>4</option></select></label><label>Уголок, м<select name="angleStock" id="angleStock"><option>2</option><option selected>3</option><option>4</option></select></label></div></details>
+          <div class="calc-stock"><div class="calc-stock-fields"><label>Рейка, мм<select name="slatStock" id="slatStock"><option>2000</option><option selected>3000</option><option>4000</option><option>6000</option></select></label><label>Гребёнка, мм<select name="stringerStock" id="stringerStock"><option>2000</option><option selected>3000</option><option>4000</option></select></label></div></div>
+        </fieldset>
+        <fieldset><legend>04 <span>Соединители рейки</span></legend>
+          <label class="calc-select">Способ подбора<select id="connectorMode" name="connectorMode"><option value="auto">По количеству стыков</option><option value="project">Количество по проекту</option></select></label>
+          <div id="connector-run-fields" hidden><label>Длина линии рейки, мм<input id="connectorRun" name="connectorRun" inputmode="decimal" placeholder="Укажите, если известна" disabled></label></div>
+          <div id="connector-quantity-fields" hidden><label>Соединители с запасом, шт.<input id="connectorQuantity" name="connectorQuantity" inputmode="numeric" placeholder="Количество из проекта" disabled></label></div>
+          <p id="connector-note" class="calc-help">Один соединитель на стык двух заготовок. Необходимость и тип соединителя уточняются по проекту.</p>
         </fieldset>
         <button id="reset-calculator" class="calc-reset" type="button">Сбросить параметры</button>
       </form>
@@ -72,11 +78,11 @@
           <div id="geometry-summary" class="calc-summary"></div>
           <div id="material-results" class="calc-materials" aria-live="polite" aria-atomic="true"></div>
           <p id="consumption-note" class="calc-consumption"></p>
-          <div class="calc-actions"><button id="export-csv" type="button" class="calc-primary">Скачать ведомость CSV</button><button id="copy-calculation" type="button">Копировать расчёт</button><button id="print-calculation" type="button">Печать</button></div>
+          <div class="calc-actions"><button id="export-pdf" type="button" class="calc-primary">Сохранить PDF</button><button id="copy-calculation" type="button">Копировать расчёт</button><button id="print-calculation" type="button">Печать</button></div>
           <p id="action-status" class="calc-help" role="status"></p>
           <details class="calc-method"><summary>Как считается и что учтено</summary><div id="calculation-method"></div></details>
         </section>
-        <aside class="calc-disclaimer"><strong>Предварительный расчёт, не монтажный проект.</strong><p>Не учитываются сложная форма помещения, проёмы, светильники, несущая способность основания и особенности соединителей. Длины заготовок и возможность стыковки уточняются у производителя. Шаг подвесов 0,6 м и остальные параметры не заменяют требований конкретной системы.</p></aside>
+        <aside class="calc-disclaimer"><strong>Предварительный расчёт, не монтажный проект.</strong><p>Не учитываются проёмы, светильники, сложная геометрия и несущая способность основания. По площади нельзя определить точную раскладку и соединители без длин линий. Длины заготовок, шаги и допустимость стыков согласуются по проекту.</p></aside>
       </div>
     </div>
   </main>

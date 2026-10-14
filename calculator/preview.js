@@ -13,7 +13,8 @@ export function renderPlan(target, r) {
   const carriers = Array.from({ length: count }, (_, n) => along
     ? `<line x1="${x}" x2="${x + w}" y1="${y + (n + 0.5) * carrierStep}" y2="${y + (n + 0.5) * carrierStep}"/>`
     : `<line x1="${x + (n + 0.5) * carrierStep}" x2="${x + (n + 0.5) * carrierStep}" y1="${y}" y2="${y + h}"/>`).join('');
-  target.innerHTML = `<svg viewBox="0 0 700 430" role="img" aria-label="Схематичная раскладка потолка, ${g.length} на ${g.width} метров"><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#e7e9ed"/>${railLines}<g stroke="#e8561c" stroke-width="2" stroke-dasharray="6 4">${carriers}</g><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="none" stroke="#17191c" stroke-width="3"/><g fill="#17191c" font-family="Arial,sans-serif" font-size="16" text-anchor="middle"><text x="350" y="${y - 18}">${g.width.toLocaleString('ru-RU')} м</text><text x="${x - 26}" y="200" transform="rotate(-90 ${x - 26} 200)">${g.length.toLocaleString('ru-RU')} м</text><text x="350" y="402" font-size="12">Пунктир — гребёнки. Упрощённая схема; количество указано в ведомости.</text></g></svg>`;
+  const caption = g.estimated ? 'Условный квадрат для примера. Расход рассчитан по площади.' : 'Пунктир — гребёнки. Упрощённая схема, не монтажный чертёж.';
+  target.innerHTML = `<svg viewBox="0 0 700 430" role="img" aria-label="${g.estimated ? 'Условный пример раскладки по площади' : `Схематичная раскладка потолка, ${i.length} на ${i.width} миллиметров`}"><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#e7e9ed"/>${railLines}<g stroke="#e8561c" stroke-width="2" stroke-dasharray="6 4">${carriers}</g><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="none" stroke="#17191c" stroke-width="3"/><g fill="#17191c" font-family="Arial,sans-serif" font-size="16" text-anchor="middle">${g.estimated ? '' : `<text x="350" y="${y - 18}">${i.width.toLocaleString('ru-RU')} мм</text><text x="${x - 26}" y="200" transform="rotate(-90 ${x - 26} 200)">${i.length.toLocaleString('ru-RU')} мм</text>`}<text x="350" y="402" font-size="12">${caption}</text></g></svg>`;
 }
 
 export function createPreview(canvas, status) {
@@ -37,7 +38,6 @@ export function createPreview(canvas, status) {
     window.addEventListener('pagehide', () => { observer.disconnect(); engine.dispose(); }, { once: true });
   } catch { engine?.dispose(); status.textContent = 'Не удалось запустить 3D. Схема и расчёт доступны.'; return null; }
   const supportMat = new B.StandardMaterial('supports', scene); supportMat.diffuseColor = B.Color3.FromHexString('#4b5057');
-  const frameMat = new B.StandardMaterial('wall-angle', scene); frameMat.diffuseColor = B.Color3.FromHexString('#a5abb2');
   function reset() {
     const d = last ? Math.max(Math.min(last.geometry.length, 8), Math.min(last.geometry.width, 8)) : 5;
     camera.setTarget(B.Vector3.Zero()); camera.alpha = -Math.PI / 2.5; camera.beta = 2.15; camera.radius = d * 1.65;
@@ -64,8 +64,8 @@ export function createPreview(canvas, status) {
         const offset = start + n * pitch;
         box(`slat-${n}`, along ? sw : run, sh, along ? run : sw, along ? offset : 0, 0, along ? 0 : offset, finish);
       }
-      const lines = Math.max(2, Math.ceil(run / i.stringerSpacing - 1e-9));
-      const suspensions = Math.max(2, Math.ceil(cross / i.hangerSpacing - 1e-9));
+      const lines = Math.max(2, Math.ceil(run * 1000 / i.stringerSpacing - 1e-9));
+      const suspensions = Math.max(2, Math.ceil(cross * 1000 / i.hangerSpacing - 1e-9));
       for (let n = 0; n < lines; n++) {
         const pos = -run / 2 + (n + 0.5) * run / lines;
         box(`stringer-${n}`, along ? width : 0.035, 0.035, along ? 0.035 : length, along ? 0 : pos, sh / 2 + 0.022, along ? pos : 0, supportMat);
@@ -73,10 +73,6 @@ export function createPreview(canvas, status) {
           const offset = -cross / 2 + (k + 0.5) * cross / suspensions;
           box(`hanger-${n}-${k}`, 0.006, 0.2, 0.006, along ? offset : pos, sh / 2 + 0.14, along ? pos : offset, supportMat);
         }
-      }
-      for (const edge of [-1, 1]) {
-        box(`angle-x-${edge}`, 0.025, 0.025, length, edge * width / 2, 0, 0, frameMat);
-        box(`angle-z-${edge}`, width, 0.025, 0.025, 0, 0, edge * length / 2, frameMat);
       }
       status.textContent = `${i.slatWidth} × ${i.slatHeight} мм · зазор ${i.gap} мм · ${g.length > 8 || g.width > 8 ? 'фрагмент' : 'модель помещения'}`;
       if (first || changed) reset(); engine.resize();
