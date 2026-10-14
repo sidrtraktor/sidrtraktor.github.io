@@ -4,7 +4,7 @@
 export const DEFAULTS = Object.freeze({
   mode: 'dimensions', length: 5000, width: 4000, area: 20,
   slatWidth: 50, slatHeight: 100, gap: 50, orientation: 'length',
-  stringerSpacing: 1000, hangerSpacing: 600,
+  stringerSpacing: 1000, hangerSpacing: 1000,
   reserve: 5, slatStock: 3000, stringerStock: 3000, color: '9006',
   connectorMode: 'auto', connectorRun: '', connectorQuantity: '',
 });

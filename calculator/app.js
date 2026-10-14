@@ -8,7 +8,7 @@ const actionStatus = document.getElementById('action-status');
 const actionButtons = [...document.querySelectorAll('.calc-actions button')];
 const format = (n, digits = 2) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: digits }).format(n);
 // Do not interpret old saved metre values as millimetres.
-const storageKey = 'prostill.ceilingCalculator.v3';
+const storageKey = 'prostill.ceilingCalculator.v3.1';
 let current = null;
 let preview = null;
 let previewTimer;
